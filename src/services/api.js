@@ -103,7 +103,7 @@ const fakeDatabase = {
       text: 'The tea ceremony was so peaceful and educational. I learned so much about Japanese culture!',
       date: '2024-04-15',
       helpful: 8
-    }
+    },
         {
       id: 2,
       userId: 2,
@@ -115,7 +115,7 @@ const fakeDatabase = {
       date: '2024-04-10',
       helpful: 12
     }
-    ]
+    ],
 
     //bookings for chris
 
@@ -133,13 +133,11 @@ const fakeDatabase = {
   ]
 }
 
-//countries functions
+//countries functions for CHRIS
 
 export const countries = {
 
-
-    //for getting all the countries
-
+  //for getting all the countries
     getAll: async () => {await wait();
 
         return{
@@ -147,7 +145,6 @@ export const countries = {
             data: fakeDatabase.countries
         };
     },
-
 
     //get one country by ID
     getById: async (id) =>
@@ -157,19 +154,13 @@ export const countries = {
 
         if (country){
             return {
-                success: true
+                success: true,
                 data: country
             };
         }
-
         return {
             success: false,
             message: 'country not found'
         };
-
-
     }
-
-
-
 }
