@@ -5,7 +5,7 @@ const wait = (ms = 500) => new promise (resolve => setTimeout(resolve, ms));
 
 
 
-//our fake adatabase you guys can now draw from
+//our fake database you guys can now draw from
 
 
 const fakeDatabase = {
@@ -131,17 +131,44 @@ const fakeDatabase = {
       status: 'confirmed'
     }
   ]
+}
+
+//countries functions
+
+export const countries = {
 
 
+    //for getting all the countries
+
+    getAll: async () => {await wait();
+
+        return{
+            success: true,
+            data: fakeDatabase.countries
+        };
+    },
 
 
+    //get one country by ID
+    getById: async (id) =>
+    {
+        await wait();
+        const country = fakeDatabase.countries.find(c => c.id === parseInt(id) ) //parseInt i used it to convert the id string into a number for you
+
+        if (country){
+            return {
+                success: true
+                data: country
+            };
+        }
+
+        return {
+            success: false,
+            message: 'country not found'
+        };
 
 
-
-
-
-
-
+    }
 
 
 
