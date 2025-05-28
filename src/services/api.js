@@ -117,6 +117,21 @@ const fakeDatabase = {
     }
     ]
 
+    //bookings for chris
+
+
+      bookings: [
+    {
+      id: 1,
+      userId: 1,
+      experienceId: 1,
+      date: '2024-06-15',
+      people: 2,
+      totalPrice: 100,
+      status: 'confirmed'
+    }
+  ]
+
 
 
 
