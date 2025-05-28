@@ -3,7 +3,6 @@ import { Star } from 'lucide-react';
 
 export default function ReviewForm({ countryId, countryName, onSubmit}) {
 
-  const [reviewTitle,setReviewTitle]= useState('');
   const [comment, setComment] = useState('');
   const [rating, setRating] = useState(0);
 
@@ -14,6 +13,12 @@ export default function ReviewForm({ countryId, countryName, onSubmit}) {
     setComment('');
     setRating(0);
   };
+   const newReview = {
+      rating: Number(rating),
+      comment,
+      timestamp: new Date().toISOString()
+    }
+  onSubmit(countryId, newReview);
 
   return (
     <form onSubmit={handleSubmit} className="reviewForm">
