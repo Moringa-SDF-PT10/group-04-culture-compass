@@ -133,6 +133,11 @@ const fakeDatabase = {
   ]
 }
 
+
+
+
+
+
 //countries functions for CHRIS
 
 export const countries = {
@@ -162,5 +167,30 @@ export const countries = {
             success: false,
             message: 'country not found'
         };
+    }
+}
+
+
+
+export const reviews = {
+    getByCountry: async (countryId) => {
+        await wait();
+        const countryReviews = fakeDatabase.reviews
+        .filter(r => r.countryId === parseInt(countryId))
+        .map(review => {
+            //function for adding user info to each review
+            const user = fakeDatabase.users.find(u => u.id ===review.userId)
+            return {
+                ...review, 
+                userName: user ? user.name: 'Unknown',
+                userAvatar: user ? user.avatar: ''
+            };
+        });
+
+        return {
+            success: true,
+            data: countryReviews
+        }
+
     }
 }
