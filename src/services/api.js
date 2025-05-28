@@ -88,7 +88,35 @@ const fakeDatabase = {
       averageRating: 4.6,
       totalReviews: 156
     }
+    ],
+
+    //reviews for ruth
+    reviews: [
+
+    {
+      id: 1,
+      userId: 1,
+      countryId: 1,
+      experienceId: 1,
+      rating: 4,
+      title: 'Amazing Experience!',
+      text: 'The tea ceremony was so peaceful and educational. I learned so much about Japanese culture!',
+      date: '2024-04-15',
+      helpful: 8
+    }
+        {
+      id: 2,
+      userId: 2,
+      countryId: 2,
+      experienceId: 2,
+      rating: 5,
+      title: 'Best Cooking im telling you bruh you gotta try it ',
+      text: 'The chef was fantastic and the pasta was delicious. Highly recommend!',
+      date: '2024-04-10',
+      helpful: 12
+    }
     ]
+
 
 
 
