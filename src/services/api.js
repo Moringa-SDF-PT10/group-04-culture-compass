@@ -190,7 +190,54 @@ export const reviews = {
         return {
             success: true,
             data: countryReviews
-        }
+        };
 
+    },
+
+
+//now a function for adding a new review
+add: async (reviewData) => {
+    await wait();
+
+
+    const newReview = {
+        id: fakeDatabase.reviews.length + 1,
+        ...reviewData,
+        date: new Date().toISOString().split('T')[0],
+        helpful: 0
+    };
+    fakeDatabase.reviews.push(newReview);
+
+    return{
+        success:true,
+        data:newReview,
+        message:'review was added mate'
     }
+  }
 }
+
+
+
+//function for showing stars
+
+
+export const helpers ={
+
+getStarRating: (rating) => {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    let stars = '⭐'. repeat(fullStars);
+    if(hasHalfStar) stars += '⭐';
+
+    return stars;
+}
+}
+
+
+export default {
+    countries,
+    reviews,
+    helpers,
+}
+
