@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Reviews from './features/reviews/Reviews'
 import LoginForm from './features/authentication/LoginForm'
 import SignUpForm from './features/authentication/SignUpForm'
 import Home from './Components/Home'
@@ -35,6 +36,7 @@ function App() {
           <Link to="/countries">Countries</Link>
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
+          <Link to={"/Reviews"}>Reviews</Link>
         </nav>
         
         <Routes>
@@ -43,6 +45,7 @@ function App() {
           <Route path="/country/:id" element={<CountryDetails />} />
           <Route path="/login" element={<LoginForm users={users} setUsers={setUsers} />} />
           <Route path="/signup" element={<SignUpForm users={users} setUsers={setUsers} />} />
+          <Route path='/Reviews' element={<Reviews/>} />
         </Routes>
       </div>
     </Router>
