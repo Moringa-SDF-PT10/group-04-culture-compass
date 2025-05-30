@@ -1,8 +1,33 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import LoginForm from './features/authentication/LoginForm'
+import SignUpForm from './features/authentication/SignUpForm'
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Countries from './Components/Countries'
 import CountryDetails from './Components/CountriesDetails'
 
 function App() {
+  //Users array for authentication
+  const [users, setUsers] = useState([
+    {
+      id: 1,
+      name: 'Hugh Jazz',
+      email: 'Jazz@example.com',
+      password: '12345',
+      isLoggedin: 'false',
+    },
+    {
+      id: 2,
+      name: 'Michael Joseph',
+      email: 'aoinihonjin@gmail.com',
+      password: '12345',
+      isLoggedin: 'false',
+    }
+  ]);
+
   return (
     <Router>
       <div className="app" id="main">
@@ -45,6 +70,9 @@ function App() {
 
 const Home = () => {
   return (
+    <>
+      <SignUpForm users={users} setUsers={setUsers} />
+    </>
     <div className="container" id="home">
       <div className="center">
         <h1 className="title">
