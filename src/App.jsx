@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import LoginForm from './features/authentication/LoginForm'
+import SignUpForm from './features/authentication/SignUpForm'
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <>
-      <LoginForm users={users} />
+      <SignUpForm users={users} setUsers={setUsers} />
     </>
   )
 }
