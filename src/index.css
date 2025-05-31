@@ -261,4 +261,36 @@ a{
   font-weight:500;
   color:var(--browm);
 }
+/* dropdown  and dropdown animation animation */
 
+.user-dropdown{
+  position:absolute;
+  top: calc(100% + 10px);
+  right:0;
+  background:var(--grey);
+  border: 1px solid var(--light-gray);
+  border: 10px;
+  box-shadow: 0 8px 32px var(--black);
+
+
+  backdrop-filter: blur(10px);
+
+  min-width: 280px;
+  z-index: 1000;
+  overflow: hidden;
+  animation: dropdownSlide 0.3s ease;
+
+}
+
+
+@keyframes dropdownSlide {
+  from{
+    opacity:0;
+    transform:translateY(10px)
+
+  }
+  to {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
