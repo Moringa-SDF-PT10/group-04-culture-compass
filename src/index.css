@@ -510,3 +510,27 @@ body{
     box-shadow:0 15px 40px var(--black);
     background-color: white;
   }
+
+/* this is for glowing dw about it future mj if it breaks remove it i was testing it out  */
+  .feature:nth-child(1):hover{
+    border-color: var(--cream);
+  }
+  .feature:nth-child(2):hover{
+     border-color: var(--pink)
+  }
+  .feature:nth-child(3):hover{
+    border-color: var(--beige)
+
+  }
+    /*imma do icon animation */
+  .icon{
+    font-size:3rem;
+    margin-bottom:1.5rem;
+    display:block;
+    transition:transform 0.5s ease;
+  }
+  .feature:hover .icon{
+    transform:scale(1.2) rotate(10deg);
+  }
+
+  
