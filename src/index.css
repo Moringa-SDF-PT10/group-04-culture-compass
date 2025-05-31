@@ -533,4 +533,16 @@ body{
     transform:scale(1.2) rotate(10deg);
   }
 
-  
+  .feature-title{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--black);
+    margin-bottom: 1rem;
+    position:relative;
+  }
+  .feature-text{
+    color:var(--grey);
+    line-height: 1.6;
+    opacity:0.5;
+  }
+
