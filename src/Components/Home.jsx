@@ -14,7 +14,7 @@ export default function Home(){
                 Explore different countries, learn about their cultures, traditional cuisines, 
                 and plan your next cultural adventure.
               </p>
-              <Link to="/countries" className="btn-primary">
+              <Link to="/LoginForm" className="btn-primary">
                 Start Exploring
               </Link>
             </div>
