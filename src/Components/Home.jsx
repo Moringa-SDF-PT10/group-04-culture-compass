@@ -21,17 +21,17 @@ export default function Home(){
             
             <div className="features">
               <div className="feature">
-                <div className="icon">🏛️</div>
+                <div className="icon"><img src='/assets/diversity.png'/></div>
                 <h3 className="feature-title">Rich Cultures</h3>
                 <p className="feature-text">Discover traditions, languages, and customs from around the globe</p>
               </div>
               <div className="feature">
-                <div className="icon">🍜</div>
+                <div className="icon"><img src='/assets/cuisine.png'/></div>
                 <h3 className="feature-title">Traditional Cuisine</h3>
                 <p className="feature-text">Explore authentic dishes and culinary traditions of each country</p>
               </div>
               <div className="feature">
-                <div className="icon">✈️</div>
+                <div className="icon"><img src='/assets/booking.png'/></div>
                 <h3 className="feature-title">Plan Your Trip</h3>
                 <p className="feature-text">Book cultural experiences and create lasting memories</p>
               </div>
