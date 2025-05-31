@@ -13,5 +13,17 @@ import { Link } from 'react-router-dom';
     setShowUserDropdown(!showUserDropdown);
   };
   return(
-    
+    <nav className='navbar'>
+        <div className='container'>
+            <div className='navbar-content'>
+            <Link to="/" className="navbar-brand">
+             <img 
+              src="/src/assets/logo.png" 
+              alt="Culture Compass" 
+              className="brand-logo"
+            />
+          </Link>
+            </div>
+        </div>
+    </nav>
   )
