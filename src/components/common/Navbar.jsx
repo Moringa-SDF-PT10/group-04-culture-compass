@@ -54,8 +54,13 @@ import { Link } from 'react-router-dom';
             ) : (
                 <div className='user-menu'>
                     <button className='user-profile-btn' onClick={toggleUserDropdown} aria-expanded={showUserDropdown} aria-haspopup={true}>
+                    <img src={user.avatar} alt={user.name} className='user-avatar'/>
+                    <span className='user-name'>{user.name}</span>
                         
                     </button>
+                  
+                    
+                    
                 </div>
 
             )}
