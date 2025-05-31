@@ -58,6 +58,27 @@ import { Link } from 'react-router-dom';
                     <span className='user-name'>{user.name}</span>
                         
                     </button>
+
+                    {/*Drop d when shownown menu */}
+
+
+                    {showUserDropdown && (
+                        <div className='user-dropdown'>
+                            <div className='dropdown-header'>
+                                <img src={user.avatar} src={user.name}
+                                 className='dropdown-avatar'/>
+                                <div className='dropdown-user-info'>
+                                    <div className='dropdown-user-name'>{user.name}</div>
+                                    <div className='dropdown-user-email'>{user.email}</div>
+                                </div>
+                    
+                            </div>
+
+                            
+                      
+
+                        </div>
+                    )}
                   
                     
                     
