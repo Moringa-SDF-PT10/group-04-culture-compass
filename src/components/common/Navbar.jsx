@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 //idk how youll do it arnold tbh but im gonna fake the logged in state so its easier for me lol
+const NavBar =() => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
 
@@ -65,7 +66,7 @@ import { Link } from 'react-router-dom';
                     {showUserDropdown && (
                         <div className='user-dropdown'>
                             <div className='dropdown-header'>
-                                <img src={user.avatar} src={user.name}
+                                <img src={user.avatar} alt={user.name}
                                  className='dropdown-avatar'/>
                                 <div className='dropdown-user-info'>
                                     <div className='dropdown-user-name'>{user.name}</div>
@@ -74,7 +75,22 @@ import { Link } from 'react-router-dom';
                     
                             </div>
 
+                            <link to = '/profile' className='dropdown-item'>
+
+                            <image className = 'dropdown-icon' src = '/src/assets/pfp.png'/>
+                            Profile
+                            </link>
+                            <link to ='/booking' className='dropdown-item'>
+                            <image src = '/src/assets/booking.png' className='dropdown-icon'/>
+                            My Bookings
+                            </link>
+                            <link to = '/reviews' className='dropdown-item'>
+                            <image src = '/src/assets/reviews' className='dropdown-icon'/>
+                              Reviews
+
+                            </link>
                             
+
                       
 
                         </div>
@@ -89,4 +105,6 @@ import { Link } from 'react-router-dom';
             </div>
         </div>
     </nav>
-  )
+  );
+};
+  export default NavBar
