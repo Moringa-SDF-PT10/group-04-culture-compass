@@ -225,8 +225,40 @@ a{
 .button-primry-small:hover{
   transform:translateY(-1px);
   box-shadow:0.4px 12px var(--gray-text);
-  filter: brighness(1.1);
+  filter: brighness(1.1);}
+
+
+/*now imma do css for the post auth buttons */
+.user-menu{
+  position:relative;
+}
+.user-profile-btn{
+  display:flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--grey);
+  border-radius: 30px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--brown);
+
+}
+.user-profile-btn:hover {
+  background: var(--light-gray);
+
 }
 
-
+.user-avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px ;
+  object-fit: cover;
+  border: 2px solid var(--tan);
+}
+.user-name{
+  font-weight:500;
+  color:var(--browm);
+}
 
