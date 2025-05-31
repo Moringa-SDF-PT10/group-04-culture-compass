@@ -20,7 +20,8 @@ const AppRoutes = () => {
       <Route path="/login" element={<LoginForm />} />
       <Route path="/signup" element={<SignUpForm />} />
 
-      {/* hizi ndo Protected Routes */}
+      {/*Protected, arnold deal with it
+      */}
       <Route
         path="/reviews"
         element={

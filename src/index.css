@@ -32,11 +32,14 @@
 
   /* border radii */
   --rounded: 8px;
-  --very-rounded: 12px
+  --very-rounded: 12px;
   /*variables for spacing*/
+  --small-space:8px;
+  --medium-space:16px;
+  --large-space:32px
   
 }
-
+/*global stylings*/
 
 html{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -51,5 +54,68 @@ html{
 h1{
   font-size: 2rem;
   font-weight:bold;
-  margin-bottom:var()
+  margin-bottom:var(--medium-space);
+  color:var(--dark-text)
+}
+
+h2{
+  font-size:2rem;
+  font-weight: bold;
+  margin-bottom: var(--medium-space);
+  color: var(--dark-text);
+}
+h3{
+  font-size:1.5rem;
+  font-weight:600;
+  margin-bottom:var(--small-space);
+  color:var(var(--dark-text));
+}
+h4{
+  font-size: 1.25rem;
+  font-weight:600;
+  margin-bottom: var(--small-space);
+  color: var(--dark-text);
+}
+
+/*paragraphs*/
+
+p{
+  margin-bottom: var(--medium-space);
+  color: var(--gray-text);
+}
+/*links finna be black*/
+a{
+  color: var(--black);
+}
+
+.navbar{
+  background-color: var(--grey);
+  backdrop-filter:blur(5px);
+  border-bottom:1px solid rba(148,137,121,0.2);
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 20px var(--black);
+}
+
+.nav-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1 rem;
+}
+
+.navbar-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+
+/*The logo i want to have a hover effect */
+.navbar-brand{
+  
 }

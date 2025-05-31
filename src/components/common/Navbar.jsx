@@ -15,7 +15,7 @@ const NavBar =() => {
   };
   return(
     <nav className='navbar'>
-        <div className='container'>
+        <div className='nav-container'>
             <div className='navbar-content'>
             <Link to="/" className="navbar-brand">
              <img 
