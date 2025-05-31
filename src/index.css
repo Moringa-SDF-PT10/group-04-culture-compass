@@ -543,6 +543,28 @@ body{
   .feature-text{
     color:var(--grey);
     line-height: 1.6;
-    opacity:0.5;
+    opacity:0.9;
+  }
+
+
+  @media(max-width: 768){
+    .hero{
+      padding:3rem 1rem;
+      min-height:50vh;
+    }
+    .features{
+      grid-template-columns: 1fr;
+      padding: 3rem 1rem;
+      gap: 2rem;
+  
+
+    }
+    .feature{
+      padding:2rem 1.5rem;
+    }
+    .btn-primary{
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+    }
   }
 
