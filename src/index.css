@@ -365,10 +365,10 @@ border-bottom: none;
 
 
 
-/* Home CSS STARTS HERE */
+/* Home  CSS STARTS HERE */
 body{
   background: linear-gradient(
-    135deg, var(--cream) 25%, var(--beige) 55%, var(--pink), var(--peach),
+    135deg, var(--cream) 25%, var(--beige) 50%, var(--pink)75, var(--peach)10%,
 
   );
 
@@ -376,4 +376,10 @@ body{
   animation: gradientshift 15s ease infinite;
   min-height: 100vh;
   font-family: "Montserrat Alternates", sans-serif;
+}
+
+@keyframes gradientShift{
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
 }
