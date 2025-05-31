@@ -361,3 +361,19 @@ border-bottom: none;
 .dropdown-item:hover .dropdown-icon{
   opacity:1;
 }
+
+
+
+
+/* Home CSS STARTS HERE */
+body{
+  background: linear-gradient(
+    135deg, var(--cream) 25%, var(--beige) 55%, var(--pink), var(--peach),
+
+  );
+
+  background-size: 400% 400%;
+  animation: gradientshift 15s ease infinite;
+  min-height: 100vh;
+  font-family: "Montserrat Alternates", sans-serif;
+}
