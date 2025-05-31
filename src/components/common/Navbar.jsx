@@ -60,7 +60,7 @@ const NavBar =() => {
                         
                     </button>
 
-                    {/*Drop d when shownown menu */}
+                    {/*Droped when shown own menu */}
 
 
                     {showUserDropdown && (
