@@ -220,24 +220,8 @@ add: async (reviewData) => {
 
 //function for showing stars
 
-
-export const helpers ={
-
-getStarRating: (rating) => {
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-
-    let stars = '⭐'. repeat(fullStars);
-    if(hasHalfStar) stars += '⭐';
-
-    return stars;
-}
-}
-
-
 export default {
     countries,
     reviews,
-    helpers,
 }
 

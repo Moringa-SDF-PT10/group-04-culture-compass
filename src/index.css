@@ -13,6 +13,7 @@
   --grey:  #393E46;
   --tan:   #948979; 
   --browm: #DFD0B8;
+  --dark-brown: rgba(148, 137, 121, 0.3);
 
 
 
@@ -85,13 +86,13 @@ p{
 }
 /*links finna be black*/
 a{
-  color: var(--black);
+  color: var(--browm);
 }
 
 .navbar{
   background-color: var(--grey);
   backdrop-filter:blur(5px);
-  border-bottom:1px solid rba(148,137,121,0.2);
+  border-bottom:1px solid var(--dark-brown);
   position: fixed;
   top:0;
   left:0;
@@ -136,3 +137,96 @@ a{
   align-items: center;
   gap: 2rem;
 }
+
+.nav-link{
+  color:var(--browm);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform:capitalize;
+}
+
+.nav-link::before{
+  content:'';
+  position:absolute;
+  bottom: 0;
+  left :50%;
+  width:0;
+  height:px;
+  background: linear-gradient(90deg, var(--tan), var(--brown));
+  transition: all 0.03s ease;
+  transform: translateX(-50%);
+}
+/* imma give it that hover color change when mouse is on top */
+.-nav-link:hover{
+  color:var(--tan);
+  background-color: var(--browm);
+
+}
+.nav-link:hover::before{
+  width:80%;
+}
+
+.navbar-action{
+  display: flex;
+  align-items:center;
+  gap:1rem;
+
+}
+
+/* login and sign up button animations incase it breaks idk im tired :) */
+
+.auth-buttons{
+  display:flex;
+  align-items:center;
+  gap: 1rem;
+}
+
+.button-secondary-small{
+  background:transparent;
+  color:var(--browm);
+  border: 1px solid var(--browm);
+  padding:0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all o.3s ease;
+  text-decoration: none;
+  display: inline-block;
+
+}
+
+.button-secondary-small:hover{
+  background: var(--tan);
+  color: var(--black);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px var(--dark-brown)
+}
+
+.button-primary-small{
+  background-color: linear-grandient(135deg, var(--tan), var(--brown));
+  color: var(--black) ;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+
+.button-primry-small:hover{
+  transform:translateY(-1px);
+  box-shadow:0.4px 12px var(--gray-text);
+  filter: brighness(1.1);
+}
+
+
+
