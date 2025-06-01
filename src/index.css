@@ -23,6 +23,9 @@
   --peach: #FFF2EB;
   --beige: #FFE8CD;
   --pink:  #FFDCDC;
+  --peach-glow: rgba(255, 214, 186, 0.08);
+  --blush-mist: rgba(255, 220, 220, 0.06);
+  --cream-whisper: rgba(255, 242, 235, 0.1);
 
   /*text colors*/
   --dark-text: #1f2937;
@@ -38,6 +41,11 @@
   --small-space:8px;
   --medium-space:16px;
   --large-space:32px
+
+    --gradient-primary: linear-gradient(135deg, var(--cream) 0%, var(--beige) 50%, var(--pink) 100%);
+  --gradient-secondary: linear-gradient(45deg, var(--peach) 0%, var(--cream) 100%);
+  --shadow-soft: 0 8px 32px rgba(148, 137, 121, 0.15);
+  --shadow-hover: 0 16px 48px rgba(148, 137, 121, 0.25);
   
 }
 /*global stylings*/
@@ -444,7 +452,7 @@ body{
     font-weight: 600;
     font-size: 1.0rem;
     transition:all 0.4 ease;
-    box-shadow:0 8px 25px rgba(148, 137, 121, 0.4);
+    box-shadow: var(--shadow-soft);
     position: relative;
     overflow: hidden;
   }
@@ -458,7 +466,7 @@ body{
     left:-100%;
     width: 100%;
     height:100%;
-    background: linear-grandient(90deg, transparent, rgba(148, 137, 121, 0.4));
+    background: linear-grandient(90deg, transparent, var(--shadow-hover));
     transition: left 0.5s ease;
 
   }
@@ -568,3 +576,34 @@ body{
     }
   }
 
+/* COUNTRIES STYLING STARTS HERE */
+#countries{
+  padding-top:90px;
+  max-width:1400px;
+  margin:0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#countries::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, var(--peach-glow) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, var(--blush-mist) transparent 50%),
+    radial-gradient(circle at 40% 80%, var(--cream-whisper) 0%, transparent 50%);
+  ;
+  pointer-events: none;
+  z-index: -1;
+}
+#countries .title{
+  text-align:center;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:700;
+  
+
+}
