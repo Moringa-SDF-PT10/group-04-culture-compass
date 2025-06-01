@@ -7,6 +7,11 @@ const Countries = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCountries, setFilteredCountries] = useState([]);
 
+  const getCulturalSiteImage = (countryCode) => {
+  const seed = countryCode.charCodeAt(0) + countryCode.charCodeAt(1) + countryCode.charCodeAt(2);
+  return `https://picsum.photos/seed/${seed}/1800/400`;
+};
+
 
   useEffect(() => {
     fetchCountries();
@@ -27,11 +32,17 @@ const Countries = () => {
       
 
       const sortedCountries = data
-        .sort((a, b) => a.name.common.localeCompare(b.name.common))
-        .slice(0, 50);
-      
-      setCountries(sortedCountries);
-      setFilteredCountries(sortedCountries);
+  .sort((a, b) => a.name.common.localeCompare(b.name.common))
+  .slice(0, 50);
+
+const countriesWithImages = sortedCountries.map((country) => ({
+  ...country,
+  culturalImage: getCulturalSiteImage(country.cca3)
+      }));
+
+setCountries(countriesWithImages);
+setFilteredCountries(countriesWithImages);
+
       setLoading(false);
     } catch (error) {
       console.error('Error fetching countries:', error);
@@ -74,9 +85,9 @@ const Countries = () => {
           >
             <div className="image">
               <img
-                src={country.flags?.png || country.flags?.svg}
-                alt={`${country.name.common} flag`}
-                className="flag"
+        src={country.culturalImage}
+          alt={`${country.name.common} cultural site`}
+        className="flag"
               />
               <div className="overlay">
                 <div className="info">
