@@ -17,11 +17,9 @@ export default function ReviewCard({ review }) {
       </div>
       <p >{review.comment}</p>
       <p className="review-date"></p>
-            {review.timestamp && (
-                <p> 
-                    Reviewed on: {new Date(review.timestamp.seconds * 1000).toLocaleDateString()}
-                </p>
-            )}
+            {review.timestamp ? (
+              <p>Reviewed on: {new Date(review.timestamp).toLocaleDateString()}</p>) : 
+              (<p>Reviewed on: Date not available</p>)}
         </div>
   );
 }

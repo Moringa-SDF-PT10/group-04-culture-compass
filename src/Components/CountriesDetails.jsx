@@ -1,16 +1,25 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Cuisine from './Cuisine';
+import ReviewForm from '../features/reviews/ReviewForm';
+import ReviewCard from '../features/reviews/ReviewCard';
 
 const CountryDetails = () => {
   const { id } = useParams();
   const [country, setCountry] = useState(null);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchCountryData();
   }, [id]);
+
+   useEffect(() => {
+    if (country?.name?.common) {
+      fetchReviews(country.name.common);
+    }
+  }, [country]);
 
   const fetchCountryData = async () => {
     try {
@@ -25,6 +34,20 @@ const CountryDetails = () => {
     }
   };
 
+  const fetchReviews = async (countryName) => {
+    try {
+      const res = await fetch(`http://localhost:3000/reviews?country=${countryName}`);
+      const data = await res.json();
+      setReviews(data.slice(0, 3)); 
+      } catch (err) {
+    console.error('Error loading reviews:', err);
+  }
+};
+
+  const handleAddReview = (newReview) => {
+    setReviews((prev) => [newReview, ...prev.slice(0, 2)]); 
+  };
+
   if (loading) return <div className="loading">Loading...</div>;
   if (error) return (
     <div className="error">
@@ -32,6 +55,16 @@ const CountryDetails = () => {
       <Link to="/countries" className="btn">Back to Countries</Link>
     </div>
   );
+
+  if (loading) return <div className="loading">Loading...</div>;
+  if (error) {
+    return (
+    <div className="error">
+      <p>Country not found</p>
+      <Link to="/countries" className="btn">Back to Countries</Link>
+    </div>
+  );
+}
 
   return (
     <div className="page">
@@ -73,6 +106,28 @@ const CountryDetails = () => {
 
         {/* Cuisine Component */}
         <Cuisine countryName={country.name.common} />
+
+        {/* Reviews Section */}
+        <div className="card">
+          <h2>Top Reviews</h2>
+          {reviews.length > 0 ? (
+           [...reviews]
+      .sort((a, b) => new Date(b.date) - new Date(a.date)) 
+      .map((review) => (
+              <ReviewCard key={review.id} review={review} />
+            ))
+          ) : (
+            <p>No reviews yet.</p>
+          )}
+
+        <Link to="/reviews" className="btn view-more">View More Reviews</Link>
+        </div>
+
+        {/* Review Form */}
+        <div className="card">
+          <h4>Leave a Review</h4>
+          <ReviewForm country={country.name.common} onAddReview={handleAddReview} />
+        </div>
 
         <Link to="/countries" className="btn back">← Back</Link>
       </div>
