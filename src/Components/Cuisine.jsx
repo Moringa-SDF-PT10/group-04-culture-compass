@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 const Cuisine = ({ countryName }) => {
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [review, setReview] = useState('');
-  const [rating, setRating] = useState(5);
 
   useEffect(() => {
     fetchMeals();
@@ -51,14 +49,6 @@ const Cuisine = ({ countryName }) => {
     }
   };
 
-  const handleReviewSubmit = (e) => {
-    e.preventDefault();
-    console.log('Review:', review, 'Rating:', rating);
-    setReview('');
-    setRating(5);
-    alert('Review submitted!');
-  };
-
   if (loading) return <div className="loading">Loading cuisine...</div>;
 
   return (
@@ -83,34 +73,6 @@ const Cuisine = ({ countryName }) => {
           <p>🍴 No cuisine data available</p>
         </div>
       )}
-
-      {/* Review Section */}
-      <div className="reviews">
-        <h3>Rate This Cuisine</h3>
-        <form onSubmit={handleReviewSubmit} className="form">
-          <div className="rating">
-            <label>Rating:</label>
-            <select value={rating} onChange={(e) => setRating(e.target.value)} className="select">
-              <option value={5}>⭐⭐⭐⭐⭐ (5)</option>
-              <option value={4}>⭐⭐⭐⭐ (4)</option>
-              <option value={3}>⭐⭐⭐ (3)</option>
-              <option value={2}>⭐⭐ (2)</option>
-              <option value={1}>⭐ (1)</option>
-            </select>
-          </div>
-          
-          <textarea
-            value={review}
-            onChange={(e) => setReview(e.target.value)}
-            placeholder={`Share your thoughts about ${countryName}'s cuisine...`}
-            className="textarea"
-            rows="4"
-            required
-          />
-          
-          <button type="submit" className="btn submit">Submit Review</button>
-        </form>
-      </div>
     </div>
   );
 };
