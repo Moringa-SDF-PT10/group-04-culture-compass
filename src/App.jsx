@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import Reviews from './features/reviews/Reviews'
 import LoginForm from './features/authentication/LoginForm'
 import SignUpForm from './features/authentication/SignUpForm'
@@ -7,6 +6,9 @@ import Home from './Components/Home'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Countries from './Components/Countries'
 import CountryDetails from './Components/CountriesDetails'
+// import NavBar from './components/common/Navbar'
+import './index.css'
+import NavBar from './navbar-test.jsx'
 
 function App() {
   //Users array for authentication
@@ -31,13 +33,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/countries">Countries</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-          <Link to={"/Reviews"}>Reviews</Link>
-        </nav>
+        {location.pathname !== "/" && <NavBar />}
+
+        
+
         
         <Routes>
           <Route path="/" element={<Home />} />
