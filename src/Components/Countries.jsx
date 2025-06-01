@@ -7,6 +7,7 @@ const Countries = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCountries, setFilteredCountries] = useState([]);
 
+
   useEffect(() => {
     fetchCountries();
   }, []);

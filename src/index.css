@@ -40,9 +40,9 @@
   /*variables for spacing*/
   --small-space:8px;
   --medium-space:16px;
-  --large-space:32px
+  --large-space:32px;
 
-    --gradient-primary: linear-gradient(135deg, var(--cream) 0%, var(--beige) 50%, var(--pink) 100%);
+  --gradient-primary: linear-gradient(135deg, var(--cream) 0%, var(--beige) 50%, var(--pink) 100%);
   --gradient-secondary: linear-gradient(45deg, var(--peach) 0%, var(--cream) 100%);
   --shadow-soft: 0 8px 32px rgba(148, 137, 121, 0.15);
   --shadow-hover: 0 16px 48px rgba(148, 137, 121, 0.25);
@@ -664,5 +664,64 @@ home{
 .search .input::placeholder{
   color:var(--tan);
   opacity:0.5;
+
+}
+
+
+/* CARDS STYLING */
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px 1fr));
+  gap:2.5rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+.grid .card{
+  background:white;
+  border:2px solid rgba(148, 137, 121, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  color: #5f5342;
+  position: relative;
+  box-shadow: 0 5px 30px;
+  transform-style: preserve-3d; /*so this one keeps children in 3d space so they don't flatten out when i use 3d animations*/
+}
+
+.grid .card::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg, rgba(255,214,186,0.1) 0%, rgba(255,220,220,0.1)25%,rgba(255,242,235,0.1)50%, rgba(141, 108, 51, 0.192)100%
+  );
+  opacity:0;
+  transition: opacity 0.3s ease;
+  z-index:1;
+  pointer-events: none;
+}
+
+.grid .card:hover{
+  transform: translateY(-12px) rotate(0.5deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.185);
+  border-color: var(--browm);
+
+}
+
+.grid .card .image{
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  z-index: 2;
+}
+.grid .card .flag{
+width: '100%';
+height: '100%';
+object-fit: cover;
 
 }
