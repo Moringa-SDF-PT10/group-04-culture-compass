@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import LoginForm from './features/authentication/LoginForm'
 import SignUpForm from './features/authentication/SignUpForm'
-
+import SignUpForm from './features/authentication/SignUpForm'
+import Home from './Components/Home'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Countries from './Components/Countries'
+import CountryDetails from './Components/CountriesDetails'
 
 function App() {
   //Users array for authentication
@@ -25,8 +27,26 @@ function App() {
     }
   ]);
 
+
   return (
-    
+    <Router>
+      <div className="App">
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/countries">Countries</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
+        </nav>
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/countries" element={<Countries />} />
+          <Route path="/country/:id" element={<CountryDetails />} />
+          <Route path="/login" element={<LoginForm users={users} setUsers={setUsers} />} />
+          <Route path="/signup" element={<SignUpForm users={users} setUsers={setUsers} />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
