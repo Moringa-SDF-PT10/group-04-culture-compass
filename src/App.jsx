@@ -33,8 +33,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-
-                {/* Render NavBar only if NOT on Home page */}
         {location.pathname !== "/" && <NavBar />}
 
         
