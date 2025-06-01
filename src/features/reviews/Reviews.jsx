@@ -12,7 +12,7 @@ const Reviews =() => {
 
     useEffect(() => {
     Promise.all([
-      fetch('http://localhost:3000/reviews').then(res => res.json()),
+      fetch('https://group-04-culture-compass.onrender.com/reviews').then(res => res.json()),
       fetch('https://restcountries.com/v3.1/all').then(res => res.json())
     ]).then(([reviewsData, countriesData]) => {
       setReviews(reviewsData);
