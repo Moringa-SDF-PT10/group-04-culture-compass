@@ -99,7 +99,7 @@ a{
 
 .navbar{
   background-color: var(--grey);
-  backdrop-filter:blur(5px);
+  backdrop-filter:blur(50px);
   border-bottom:1px solid var(--dark-brown);
   position: fixed;
   top:0;
@@ -610,4 +610,59 @@ home{
 }
 #countries .title:after{
   right:-80px;
+}
+
+
+
+/* search section */
+
+.search{
+  max-width: width 600px;
+  margin: 0 auto 3rem;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+.search::before {
+  content: '';
+  position: absolute;
+  top:-10px;
+  left:-10px;
+  right:-10px;
+  background:linear-gradient(45deg, var(--cream), var(--pink), var(--beige), var(--tan));
+  border-radius: 60px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+
+}
+
+.search:hover::before{
+  opacity:0.1;
+}
+
+.search .input{
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(148, 137, 121, 0.3);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  background: white;
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+  outline: none;
+  box-shadow:10px 4px 20px rgb(74, 73, 73)
+}
+
+.search .input:focus{
+  border-color: var(--tan);
+  box-shadow: 0 0 0 4px var(--shadow-soft), 0 8px 25px var(--beige);
+  background: white;
+  transform: translateY((-2px));
+}
+
+.search .input::placeholder{
+  color:var(--tan);
+  opacity:0.5;
+
 }

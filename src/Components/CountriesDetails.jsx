@@ -100,6 +100,8 @@ const CountryDetails = () => {
                 <span key={i} className="tag">{lang}</span>
               )) : 'N/A'}
             </div>
+
+              
             <button className="btn book">📅 Book Trip</button>
           </div>
         </div>
