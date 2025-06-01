@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 //idk how youll do it arnold tbh but im gonna fake the logged in state so its easier for me lol
 const NavBar =() => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState(null);
 
-
-  //dropdown for the user now
-    const [showUserDropdown, setShowUserDropdown] = useState(false);
-
-     const toggleUserDropdown = () => {
-    setShowUserDropdown(!showUserDropdown);
-  };
   return(
     <nav className='navbar'>
         <div className='nav-container'>
@@ -32,9 +24,9 @@ const NavBar =() => {
 
             {/*If logged in these will show too */}
             {isLoggedIn && (<>
-            <link to = '/countries' className='nav-link'>countries</link>
-            <link to = '/countries' className='nav-link'>countries</link>
-            <link to = '/countries' className='nav-link'>countries</link>
+            <Link to = '/countries' className='nav-link'>countries</Link>
+            <Link to = '/countries' className='nav-link'>countries</Link>
+            <Link to = '/countries' className='nav-link'>countries</Link>
             </>
             )}
           </div>
@@ -75,20 +67,20 @@ const NavBar =() => {
                     
                             </div>
 
-                            <link to = '/profile' className='dropdown-item'>
+                            <Link to = '/profile' className='dropdown-item'>
 
                             <image className = 'dropdown-icon' src = '/src/assets/pfp.png'/>
                             Profile
-                            </link>
-                            <link to ='/booking' className='dropdown-item'>
-                            <image src = '/src/assets/booking.png' className='dropdown-icon'/>
+                            </Link>
+                            <Link to ='/booking' className='dropdown-item'>
+                            <img src = '/src/assets/booking.png' className='dropdown-icon'/>
                             My Bookings
-                            </link>
-                            <link to = '/reviews' className='dropdown-item'>
+                            </Link>
+                            <Link to = '/reviews' className='dropdown-item'>
                             <image src = '/src/assets/reviews' className='dropdown-icon'/>
                               Reviews
 
-                            </link>
+                            </Link>
                             
 
                       

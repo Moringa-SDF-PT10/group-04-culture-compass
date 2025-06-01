@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './index.css'
+
 export default function Home(){
-    const Home = () => {
+   
         return (
           <div className="home">
             <div className="hero">
@@ -14,9 +14,10 @@ export default function Home(){
                 Explore different countries, learn about their cultures, traditional cuisines, 
                 and plan your next cultural adventure.
               </p>
-              <Link to="/LoginForm" className="btn-primary">
+              <Link to="/login" className="btn-primary">
                 Start Exploring
               </Link>
+               <Link to="/signup">Sign Up</Link>
             </div>
             
             <div className="features">
@@ -39,4 +40,4 @@ export default function Home(){
           </div>
         )
       }
-}
+

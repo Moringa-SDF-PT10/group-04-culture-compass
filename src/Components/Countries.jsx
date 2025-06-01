@@ -47,6 +47,7 @@ const Countries = () => {
   }
 
   return (
+  <div className='body'>
     <div className="container" id="countries">
       <h1 className="title">Explore Countries & Cultures</h1>
       
@@ -115,6 +116,7 @@ const Countries = () => {
           No countries found matching your search.
         </div>
       )}
+    </div>
     </div>
   );
 };

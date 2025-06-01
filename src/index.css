@@ -113,13 +113,13 @@ a{
 .nav-container{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1 rem;
+  padding: 0 1rem;
 }
 
 .navbar-content{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
   height: 70px;
 }
 
@@ -129,6 +129,7 @@ a{
   display:flex;
   align-items: center;
   text-decoration:none;
+  margin-right: auto;
 }
 .brand-logo{
   height:40px;
@@ -144,6 +145,7 @@ a{
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-left:auto;
 }
 
 .nav-link{
@@ -374,27 +376,7 @@ border-bottom: none;
 
 
 /* Home  CSS STARTS HERE */
-body{
-  background: linear-gradient(
-    135deg,var(--beige)0%, var(--cream) 25%, var(--beige) 50%, var(--pink)75, var(--peach)100%,
-
-  );
-
-  background-size: 400% 400%;
-  animation: gradientshift 15s ease infinite;
-  min-height: 100vh;
-  font-family: "Montserrat Alternates", sans-serif;
-}
-
-@keyframes gradientShift{
-  0%{background-position: 0% 50%;}
-  50%{background-position: 100% 50%;}
-  100%{background-position: 0% 50%;}
-}
-
-
-
-.home{
+home{
   padding-top: 70px ;
   min-height: 100vh;
 
@@ -404,8 +386,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+    text-align: center;
   min-height: 60vh;
   padding: 5rem 2rem;
   position: relative;
@@ -414,50 +395,47 @@ body{
   font-size: clamp(2.5rem, 5vw, 4rem);
   /*clamp to scale the text depending on the screen*/
   font-weight: 700;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif ;
   color: var(--black);
   margin-bottom: 1.5rem;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif ;
   line-height: 1.2;
   text-shadow: 2px 2px 10px var(--black);
-  background:linear-gradient(135deg, var(--black) var(--grey));
+   background:linear-gradient(135deg, var(--black) var(--grey));
   background-clip: text;
   animation: titleFloat 3s ease-in-out infinite;}
+  
 
   @keyframes titleFloat{
     0%,100%{
       transform:translateY(0px)
     }
     50%{
-      transform: translateY(-5px);
+      transform: translateY(-2px);
     }
 
   }
-
-
-  .subtitle{
+    .subtitle{
     font-size:clamp(1.1rem, 2.5vw, 1.4rem);
     color: var(--grey);
     max-width: 600px;
     margin-bottom: 2.5rem;
     line-height: 1.6;
     opacity: 0.9;
-
+    
   }
-  .btn-primary{
-    background: linear-gradient(135deg, var(--tan), rgba(148, 137, 121, 0.4));
-    color: var(--black);
-    text-decoration: none;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.0rem;
-    transition:all 0.4 ease;
-    box-shadow: var(--shadow-soft);
-    position: relative;
-    overflow: hidden;
-  }
-
-
+  .btn-primary {
+  background: linear-gradient(135deg, var(--tan),rgba(148, 137, 121, 0.4));
+  color: var(--black);
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.0rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 15px var(--gray-text);
+  position: relative;
+  overflow: hidden;
+}
 
   .btn-primary::before{
     content:'';
@@ -466,11 +444,11 @@ body{
     left:-100%;
     width: 100%;
     height:100%;
-    background: linear-grandient(90deg, transparent, var(--shadow-hover));
+    background: linear-grandient(90deg, transparent, var(--gray));
     transition: left 0.5s ease;
 
   }
-  .btn-primary:hover::before{
+    .btn-primary:hover::before{
     left:100%
   }
   .btn-primary:hover{
@@ -478,104 +456,105 @@ body{
     box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
     filter:brightness(1.1); /*dirt gold shining effect lol*/
   }
+  .features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .features{
-    display:grid;
-    grid-template-columns: repeat(auto-fit), minmax(300px, 1fr);
-    gap:2.5rem;
-    padding:4rem 2rem;
-    max-width:1500px;
-    margin: 0 auto;
 
-  }
-  .feature{
-    background: whitesmoke;
-    backdrop-filter:blur;
-    border:1px solid rgba(255, 214, 186, 0.3);
-    border-radius:20px;
-    padding:4rem, 2rem;
-    max-width:1200px;
-    margin:0 auto;
-  }
-
-  .feature::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--cream), var(--pink), var(--beige));
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
-  }
-
-  .feature:hover::before{
+.feature {
+  background: rgb(251, 245, 245);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 214, 186, 0.5);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cream), var(--pink), var(--beige));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+ .feature:hover::before{
     transform:scaleX(1);
   }
-  .feature:hover{
+    .feature:hover{
     transform: translateY(-8px);
     box-shadow:0 15px 40px var(--black);
     background-color: white;
   }
-
-/* this is for glowing dw about it future mj if it breaks remove it i was testing it out  */
-  .feature:nth-child(1):hover{
+ .feature:nth-child(1):hover{
     border-color: var(--cream);
   }
-  .feature:nth-child(2):hover{
+  .feature:nth-child(1):hover{
      border-color: var(--pink)
   }
-  .feature:nth-child(3):hover{
+  .feature:nth-child(1):hover{
     border-color: var(--beige)
 
   }
-    /*imma do icon animation */
-  .icon{
-    font-size:3rem;
-    margin-bottom:1.5rem;
-    display:block;
-    transition:transform 0.5s ease;
-  }
-  .feature:hover .icon{
-    transform:scale(1.2) rotate(10deg);
-  }
+  .icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  transition: transform 0.3s ease;
+}
 
-  .feature-title{
-    font-size:1.5rem;
-    font-weight:600;
-    color:var(--black);
-    margin-bottom: 1rem;
-    position:relative;
-  }
-  .feature-text{
-    color:var(--grey);
-    line-height: 1.6;
-    opacity:0.9;
-  }
+.feature:hover .icon {
+  transform: scale(1.2) rotate(10deg);
+}
 
 
-  @media(max-width: 768){
-    .hero{
-      padding:3rem 1rem;
-      min-height:50vh;
-    }
-    .features{
-      grid-template-columns: 1fr;
-      padding: 3rem 1rem;
-      gap: 2rem;
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.feature-text {
+  color: var(--grey);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+
+/* Home Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    min-height: 50vh;
+  }
   
-
-    }
-    .feature{
-      padding:2rem 1.5rem;
-    }
-    .btn-primary{
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-    }
+  .features {
+    grid-template-columns: 1fr;
+    padding: 3rem 1rem;
+    gap: 2rem;
   }
-
+  
+  .feature {
+    padding: 2rem 1.5rem;
+  }
+  
+  .btn-primary {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
 /* COUNTRIES STYLING STARTS HERE */
 #countries{
   padding-top:90px;
@@ -604,6 +583,31 @@ body{
   text-align:center;
   font-size:clamp(2rem,4vw,3rem);
   font-weight:700;
+  color:var(--black);
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, var(--black),var(--gray));
+  background-clip:text ;
+  position: relative;
+  animation: fadeInDown 0.8s ease-out;
+
   
 
+}
+
+#countries .title::before,
+#countries .title::after{
+  content:'';
+  position: absolute;
+  top:50%;
+  width:60px;
+  height:2px;
+  background: linear-gradient(90deg, transparent, var(--tan), transparent);
+  transform: translateY(-50%);
+}
+
+#countries .title::before{
+  left:-80px;
+}
+#countries .title:after{
+  right:-80px;
 }
