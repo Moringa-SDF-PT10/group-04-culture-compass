@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignUpForm = ({ users, setUsers }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+
+  const navigate = useNavigate();
 
   const handleSignUp = () => {
     const newUser = {
@@ -15,7 +17,14 @@ const SignUpForm = ({ users, setUsers }) => {
       isLoggedin: 'false',
     };
     setUsers([...users, newUser]);
-    setMessage('Sign-up successful!');
+
+    // Clear input fields
+    setName('');
+    setEmail('');
+    setPassword('');
+
+    // Redirect to login page
+    navigate('/login', { state: { email, password } });
   };
 
   return (
@@ -40,7 +49,6 @@ const SignUpForm = ({ users, setUsers }) => {
         onChange={(e) => setPassword(e.target.value)} 
       />
       <button onClick={handleSignUp}>Sign Up</button>
-      <p>{message}</p>
     </div>
   );
 };
