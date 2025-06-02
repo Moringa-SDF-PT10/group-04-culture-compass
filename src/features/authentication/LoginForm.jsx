@@ -6,18 +6,27 @@ const LoginForm = ({ users }) => {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
+
 
   const handleLogin = () => {
     const user = users.find(u => u.email === email && u.password === password);
     if (user) {
-      navigate('/countries'); // Redirect to Countries page
+      
+
+      navigate('/countries');
+      setIsLoggedIn(true); // Redirect to Countries page
     } else {
       setMessage('Invalid username or password');
     }
   };
 
   return (
-    <div>
+   
+    <> 
+     <div className='login-form'>
       <h2>Login</h2>
       <input 
         type="email" 
@@ -33,7 +42,13 @@ const LoginForm = ({ users }) => {
       />
       <button onClick={handleLogin}>Login</button>
       <p>{message}</p>
+     
+
     </div>
+  
+    </>
+    
+
   );
 };
 

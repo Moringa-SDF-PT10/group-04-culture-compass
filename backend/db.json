@@ -1,0 +1,712 @@
+{
+  "reviews": [
+    {
+      "id": "1",
+      "country": "Kenya",
+      "name": "Ruth",
+      "rating": 5,
+      "comment": "Kenya is beautiful and diverse!",
+      "timestamp": "2025-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "2",
+      "country": "Japan",
+      "name": "Aiko",
+      "rating": 4,
+      "comment": "Loved the food and culture.",
+      "timestamp": "2025-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "3",
+      "country": "Afghanistan",
+      "name": "Alice",
+      "rating": 5,
+      "comment": "Amazing wildlife and friendly people!",
+      "timestamp": "2023-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "4",
+      "country": "Afghanistan",
+      "name": "Jean",
+      "rating": 4,
+      "comment": "Loved the food and architecture.",
+      "timestamp": "2024-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "5",
+      "country": "Afghanistan",
+      "name": "Ruth",
+      "rating": 5,
+      "comment": "Kenya is beautiful and diverse!",
+      "timestamp": "2025-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "6",
+      "country": "Japan",
+      "name": "Aiko",
+      "rating": 4,
+      "comment": "Loved the food and culture.",
+      "timestamp": "2025-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "7",
+      "country": "Canada",
+      "name": "Alice",
+      "rating": 5,
+      "comment": "Amazing wildlife and friendly people!",
+      "timestamp": "2025-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "8",
+      "country": "Canada",
+      "name": "Jean",
+      "rating": 4,
+      "comment": "Loved the food and architecture.",
+      "timestamp": "2025-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "c37a",
+      "country": "Afghanistan",
+      "name": "Ruth",
+      "rating": 1,
+      "comment": "test",
+      "timestamp": "2025-06-01T07:47:40.646Z"
+    },
+    {
+      "id": "dc9d",
+      "country": "Afghanistan",
+      "name": "Jerry",
+      "rating": 4,
+      "comment": "Loved It!",
+      "timestamp": "2025-01-01T07:47:58.308Z"
+    },
+    {
+      "id": "9ad9",
+      "country": "Canada",
+      "name": "Irene",
+      "rating": 3,
+      "comment": "should clear form",
+      "timestamp": "2025-06-01T07:57:29.264Z"
+    },
+    {
+      "id": "150c",
+      "countryCode": "",
+      "country": "Burundi",
+      "name": "test",
+      "rating": 3,
+      "comment": "Could have been better",
+      "timestamp": "2025-06-01T14:47:49.892Z"
+    },
+    {
+      "id": "0033",
+      "countryCode": "",
+      "country": "Burundi",
+      "name": "John",
+      "rating": 5,
+      "comment": "Best place and food ever!",
+      "timestamp": "2025-06-01T14:49:03.642Z"
+    }
+  ],
+
+"bookings":[
+  {
+    "date": "date 1",
+    "name": "name 1",
+    "travelers": 14,
+    "id": "1"
+  },
+  {
+    "date": "date 2",
+    "name": "name 2",
+    "travelers": 36,
+    "id": "2"
+  },
+  {
+    "date": "date 3",
+    "name": "name 3",
+    "travelers": 70,
+    "id": "3"
+  },
+  {
+    "date": "date 4",
+    "name": "name 4",
+    "travelers": 45,
+    "id": "4"
+  },
+  {
+    "date": "date 5",
+    "name": "name 5",
+    "travelers": 33,
+    "id": "5"
+  },
+  {
+    "date": "date 6",
+    "name": "name 6",
+    "travelers": 74,
+    "id": "6"
+  },
+  {
+    "date": "date 7",
+    "name": "name 7",
+    "travelers": 69,
+    "id": "7"
+  },
+  {
+    "date": "date 8",
+    "name": "name 8",
+    "travelers": 99,
+    "id": "8"
+  },
+  {
+    "date": "date 9",
+    "name": "name 9",
+    "travelers": 69,
+    "id": "9"
+  },
+  {
+    "date": "date 10",
+    "name": "name 10",
+    "travelers": 38,
+    "id": "10"
+  },
+  {
+    "date": "date 11",
+    "name": "name 11",
+    "travelers": 58,
+    "id": "11"
+  },
+  {
+    "date": "date 12",
+    "name": "name 12",
+    "travelers": 5,
+    "id": "12"
+  },
+  {
+    "date": "date 13",
+    "name": "name 13",
+    "travelers": 62,
+    "id": "13"
+  },
+  {
+    "date": "date 14",
+    "name": "name 14",
+    "travelers": 83,
+    "id": "14"
+  },
+  {
+    "date": "date 15",
+    "name": "name 15",
+    "travelers": 94,
+    "id": "15"
+  },
+  {
+    "date": "date 16",
+    "name": "name 16",
+    "travelers": 44,
+    "id": "16"
+  },
+  {
+    "date": "date 17",
+    "name": "name 17",
+    "travelers": 58,
+    "id": "17"
+  },
+  {
+    "date": "date 18",
+    "name": "name 18",
+    "travelers": 84,
+    "id": "18"
+  },
+  {
+    "date": "date 19",
+    "name": "name 19",
+    "travelers": 13,
+    "id": "19"
+  },
+  {
+    "date": "date 20",
+    "name": "name 20",
+    "travelers": 89,
+    "id": "20"
+  },
+  {
+    "date": "date 21",
+    "name": "name 21",
+    "travelers": 5,
+    "id": "21"
+  },
+  {
+    "date": "date 22",
+    "name": "name 22",
+    "travelers": 79,
+    "id": "22"
+  },
+  {
+    "date": "date 23",
+    "name": "name 23",
+    "travelers": 99,
+    "id": "23"
+  },
+  {
+    "date": "date 24",
+    "name": "name 24",
+    "travelers": 97,
+    "id": "24"
+  },
+  {
+    "date": "date 25",
+    "name": "name 25",
+    "travelers": 70,
+    "id": "25"
+  },
+  {
+    "date": "date 26",
+    "name": "name 26",
+    "travelers": 18,
+    "id": "26"
+  },
+  {
+    "date": "date 27",
+    "name": "name 27",
+    "travelers": 35,
+    "id": "27"
+  },
+  {
+    "date": "date 28",
+    "name": "name 28",
+    "travelers": 44,
+    "id": "28"
+  },
+  {
+    "date": "date 29",
+    "name": "name 29",
+    "travelers": 93,
+    "id": "29"
+  },
+  {
+    "date": "date 30",
+    "name": "name 30",
+    "travelers": 90,
+    "id": "30"
+  },
+  {
+    "date": "date 31",
+    "name": "name 31",
+    "travelers": 25,
+    "id": "31"
+  },
+  {
+    "date": "date 32",
+    "name": "name 32",
+    "travelers": 60,
+    "id": "32"
+  },
+  {
+    "date": "date 33",
+    "name": "name 33",
+    "travelers": 34,
+    "id": "33"
+  },
+  {
+    "date": "date 34",
+    "name": "name 34",
+    "travelers": 86,
+    "id": "34"
+  },
+  {
+    "date": "date 35",
+    "name": "name 35",
+    "travelers": 13,
+    "id": "35"
+  },
+  {
+    "date": "date 36",
+    "name": "name 36",
+    "travelers": 69,
+    "id": "36"
+  },
+  {
+    "date": "date 37",
+    "name": "name 37",
+    "travelers": 16,
+    "id": "37"
+  },
+  {
+    "date": "date 38",
+    "name": "name 38",
+    "travelers": 52,
+    "id": "38"
+  },
+  {
+    "date": "date 39",
+    "name": "name 39",
+    "travelers": 67,
+    "id": "39"
+  },
+  {
+    "date": "date 40",
+    "name": "name 40",
+    "travelers": 21,
+    "id": "40"
+  },
+  {
+    "date": "date 41",
+    "name": "name 41",
+    "travelers": 93,
+    "id": "41"
+  },
+  {
+    "date": "date 42",
+    "name": "name 42",
+    "travelers": 69,
+    "id": "42"
+  },
+  {
+    "date": "date 43",
+    "name": "name 43",
+    "travelers": 40,
+    "id": "43"
+  },
+  {
+    "date": "date 44",
+    "name": "name 44",
+    "travelers": 58,
+    "id": "44"
+  },
+  {
+    "date": "date 45",
+    "name": "name 45",
+    "travelers": 11,
+    "id": "45"
+  },
+  {
+    "date": "date 46",
+    "name": "name 46",
+    "travelers": 4,
+    "id": "46"
+  },
+  {
+    "date": "date 47",
+    "name": "name 47",
+    "travelers": 21,
+    "id": "47"
+  },
+  {
+    "date": "date 48",
+    "name": "name 48",
+    "travelers": 17,
+    "id": "48"
+  },
+  {
+    "date": "date 49",
+    "name": "name 49",
+    "travelers": 80,
+    "id": "49"
+  },
+  {
+    "date": "date 50",
+    "name": "name 50",
+    "travelers": 57,
+    "id": "50"
+  },
+  {
+    "date": "date 51",
+    "name": "name 51",
+    "travelers": 42,
+    "id": "51"
+  },
+  {
+    "date": "date 52",
+    "name": "name 52",
+    "travelers": 61,
+    "id": "52"
+  },
+  {
+    "date": "date 53",
+    "name": "name 53",
+    "travelers": 17,
+    "id": "53"
+  },
+  {
+    "date": "date 54",
+    "name": "name 54",
+    "travelers": 26,
+    "id": "54"
+  },
+  {
+    "date": "date 55",
+    "name": "name 55",
+    "travelers": 37,
+    "id": "55"
+  },
+  {
+    "date": "date 56",
+    "name": "name 56",
+    "travelers": 94,
+    "id": "56"
+  },
+  {
+    "date": "date 57",
+    "name": "name 57",
+    "travelers": 61,
+    "id": "57"
+  },
+  {
+    "date": "date 58",
+    "name": "name 58",
+    "travelers": 45,
+    "id": "58"
+  },
+  {
+    "date": "date 59",
+    "name": "name 59",
+    "travelers": 81,
+    "id": "59"
+  },
+  {
+    "date": "date 60",
+    "name": "name 60",
+    "travelers": 35,
+    "id": "60"
+  },
+  {
+    "date": "date 61",
+    "name": "name 61",
+    "travelers": 82,
+    "id": "61"
+  },
+  {
+    "date": "date 62",
+    "name": "name 62",
+    "travelers": 83,
+    "id": "62"
+  },
+  {
+    "date": "date 63",
+    "name": "name 63",
+    "travelers": 26,
+    "id": "63"
+  },
+  {
+    "date": "date 64",
+    "name": "name 64",
+    "travelers": 12,
+    "id": "64"
+  },
+  {
+    "date": "date 65",
+    "name": "name 65",
+    "travelers": 90,
+    "id": "65"
+  },
+  {
+    "date": "date 66",
+    "name": "name 66",
+    "travelers": 96,
+    "id": "66"
+  },
+  {
+    "date": "date 67",
+    "name": "name 67",
+    "travelers": 60,
+    "id": "67"
+  },
+  {
+    "date": "date 68",
+    "name": "name 68",
+    "travelers": 49,
+    "id": "68"
+  },
+  {
+    "date": "date 69",
+    "name": "name 69",
+    "travelers": 91,
+    "id": "69"
+  },
+  {
+    "date": "date 70",
+    "name": "name 70",
+    "travelers": 10,
+    "id": "70"
+  },
+  {
+    "date": "date 71",
+    "name": "name 71",
+    "travelers": 43,
+    "id": "71"
+  },
+  {
+    "date": "date 72",
+    "name": "name 72",
+    "travelers": 2,
+    "id": "72"
+  },
+  {
+    "date": "date 73",
+    "name": "name 73",
+    "travelers": 36,
+    "id": "73"
+  },
+  {
+    "date": "date 74",
+    "name": "name 74",
+    "travelers": 2,
+    "id": "74"
+  },
+  {
+    "date": "date 75",
+    "name": "name 75",
+    "travelers": 2,
+    "id": "75"
+  },
+  {
+    "date": "date 76",
+    "name": "name 76",
+    "travelers": 70,
+    "id": "76"
+  },
+  {
+    "date": "date 77",
+    "name": "name 77",
+    "travelers": 51,
+    "id": "77"
+  },
+  {
+    "date": "date 78",
+    "name": "name 78",
+    "travelers": 59,
+    "id": "78"
+  },
+  {
+    "date": "date 79",
+    "name": "name 79",
+    "travelers": 32,
+    "id": "79"
+  },
+  {
+    "date": "date 80",
+    "name": "name 80",
+    "travelers": 87,
+    "id": "80"
+  },
+  {
+    "date": "date 81",
+    "name": "name 81",
+    "travelers": 26,
+    "id": "81"
+  },
+  {
+    "date": "date 82",
+    "name": "name 82",
+    "travelers": 17,
+    "id": "82"
+  },
+  {
+    "date": "date 83",
+    "name": "name 83",
+    "travelers": 15,
+    "id": "83"
+  },
+  {
+    "date": "date 84",
+    "name": "name 84",
+    "travelers": 4,
+    "id": "84"
+  },
+  {
+    "date": "date 85",
+    "name": "name 85",
+    "travelers": 9,
+    "id": "85"
+  },
+  {
+    "date": "date 86",
+    "name": "name 86",
+    "travelers": 47,
+    "id": "86"
+  },
+  {
+    "date": "date 87",
+    "name": "name 87",
+    "travelers": 85,
+    "id": "87"
+  },
+  {
+    "date": "date 88",
+    "name": "name 88",
+    "travelers": 56,
+    "id": "88"
+  },
+  {
+    "date": "date 89",
+    "name": "name 89",
+    "travelers": 22,
+    "id": "89"
+  },
+  {
+    "date": "date 90",
+    "name": "name 90",
+    "travelers": 20,
+    "id": "90"
+  },
+  {
+    "date": "date 91",
+    "name": "name 91",
+    "travelers": 15,
+    "id": "91"
+  },
+  {
+    "date": "date 92",
+    "name": "name 92",
+    "travelers": 87,
+    "id": "92"
+  },
+  {
+    "date": "date 93",
+    "name": "name 93",
+    "travelers": 92,
+    "id": "93"
+  },
+  {
+    "date": "date 94",
+    "name": "name 94",
+    "travelers": 56,
+    "id": "94"
+  },
+  {
+    "date": "date 95",
+    "name": "name 95",
+    "travelers": 41,
+    "id": "95"
+  },
+  {
+    "date": "date 96",
+    "name": "name 96",
+    "travelers": 51,
+    "id": "96"
+  },
+  {
+    "date": "date 97",
+    "name": "name 97",
+    "travelers": 3,
+    "id": "97"
+  },
+  {
+    "date": "date 98",
+    "name": "name 98",
+    "travelers": 100,
+    "id": "98"
+  },
+  {
+    "date": "date 99",
+    "name": "name 99",
+    "travelers": 54,
+    "id": "99"
+  },
+  {
+    "date": "date 100",
+    "name": "name 100",
+    "travelers": 17,
+    "id": "100"
+  }
+]}
