@@ -120,7 +120,7 @@ setCountry(countryWithImage);
 
         {/* Booking Trip Component */}
         {showBookingForm && (
-          <div className="booking-card">
+          <div className>
             <BookingTrip
               countryName={country.name.common}
               countryId={id}

@@ -894,7 +894,7 @@ filter:brightness(0.5) contrast(1.05)
 }
 
 
-/*MY CONTAINER STARTS HERE*/
+/*COUNTRY CONTAINER STARTS HERE*/
 .country-container{
   max-width: 1000px;
   margin: 0 auto;
@@ -918,22 +918,6 @@ filter:brightness(0.5) contrast(1.05)
   box-shadow:var(--shadow-soft);
   margin-bottom: 2rem;
   margin-top: 2rem;
-
-}
-.booking-card{
-  background:white;
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(148, 137, 121, 0.25);
-  border-radius: 15px;
-  padding: 2rem;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow:var(--shadow-soft);
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  
-
 
 }
 .country-card::before{
@@ -1003,6 +987,65 @@ filter:brightness(0.5) contrast(1.05)
   border-radius: 5px;
   font-size: 0.85rem;
 }
+
+/* ADDED Booking FORM */
+.booking-title{
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+}
+
+.booking-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  grid-area: 0.5rem;
+}
+.form-group label{
+  font-weight: 600;
+  color: var(--black);
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 1rem;
+}
+.form-group input{
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(148, 137, 121, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  background: white;}
+.booking-submit{
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  width: 100%;
+  background: linear-gradient(135deg, var(--tan), var(--browm));
+  color: var(--black);
+  border: none;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  font-family:"Sour Gummy", sans-serif;
+}
+.booking-submit:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(148, 137, 121, 0.4);
+}
+
+
+
 
 /*CUISIN CARDS START HERE*/
 .cuisine-section h2{
@@ -1432,4 +1475,9 @@ animation: pulse 1.5s ease-in-out infinite;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Sour Gummy", sans-serif;
+}
+.reviewForm .submit:hover{
+      transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
+
 }
