@@ -60,7 +60,7 @@ const Cuisine = ({ countryName }) => {
 
   return (
     <div className="cuisine-section">
-      <h2><img src='/public/assets/cuisine.png'/> Traditional Cuisine</h2>
+      <h2><img src='/assets/cuisine.png'/> Traditional Cuisine</h2>
       
       {/* Meals Grid */}
       {meals.length > 0 ? (
