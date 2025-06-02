@@ -1141,3 +1141,59 @@ animation: pulse 1.5s ease-in-out infinite;
   box-shadow:var(--shadow-hover) ;
   
 }
+
+
+/*For the Login Form */
+.login-form{
+  max-width:400px;
+  margin:2rem auto;
+  padding: 2rem;
+  background-color: white;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(148, 137, 121, 0.15);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s ease;
+  margin-bottom: 0 auto;
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.login-form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(148, 137, 121, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.login-form h2{
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-family:  "Sour Gummy", sans-serif;
+  
+}
+
+.login-form button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--tan), var(--browm));
+  color: var(--black);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+.login-form button:hover{
+  transform: translateY(-2px);
+  box-shadow:  0 8px 20px rgba(148, 137, 121, 0.4);
+}

@@ -51,7 +51,7 @@ const Reviews =() => {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <div>
+    <div className='reviews-page'>
       <h2>All Reviews</h2>
       <div className='country-filter'>
         <label>

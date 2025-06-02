@@ -28,7 +28,7 @@ const SignUpForm = ({ users, setUsers }) => {
   };
 
   return (
-    <div>
+    <div className='SignUpForm'>
       <h2>Sign Up</h2>
       <input 
         type="text" 
