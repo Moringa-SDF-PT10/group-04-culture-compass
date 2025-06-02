@@ -9,6 +9,10 @@ import Countries from './Components/Countries';
 import CountryDetails from './Components/CountriesDetails';
 import NavBar from './components/common/Navbar';
 import './index.css';
+import Cuisine from "./Components/Cuisine";
+import AllCuisinesPage from './Components/AllCuisinesPage';
+
+
 
 function App() {
   const location = useLocation();
@@ -43,6 +47,8 @@ function App() {
         <Route path="/login" element={<LoginForm users={users} setUsers={setUsers} />} />
         <Route path="/signup" element={<SignUpForm users={users} setUsers={setUsers} />} />
         <Route path="/reviews" element={<Reviews />} />
+        <Route path="/" element={<Cuisine countryName="CountryName" />} />
+<Route path="/cuisines/:countryName" element={<AllCuisinesPage />} />
       </Routes>
     </div>
   );
