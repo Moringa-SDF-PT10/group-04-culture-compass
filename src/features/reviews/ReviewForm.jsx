@@ -46,7 +46,7 @@ const ReviewForm = ({ country, onAddReview }) => {
 
   return (
     <form onSubmit={handleSubmit} className="reviewForm">
-      <h3 className="title">Add Review for {country}</h3>
+      <h3 className="review-title">Add Review for {country}</h3>
             <label>
         Name:
         <input

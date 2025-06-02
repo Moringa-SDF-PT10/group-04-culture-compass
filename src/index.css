@@ -819,3 +819,91 @@ filter:brightness(0.5) contrast(1.05)
 .grid .card:hover .hint{
   transform: translateX(15px);
 }
+/*ill make this more interactive if i have time*/
+
+/* COUNTRIES DETAILS STARTS HERE */
+.page{
+  padding-top: 90px;
+  min-height:100vh;
+  position:relative;
+}
+.page::before{
+  content: '';
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.page .hero{
+  display: flex;
+  align-items: center;
+  gap:3rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero .flag{
+  width: 1800px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: var(--very-rounded);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s ease;
+  border: 3px solid var(--tan);
+}
+
+.hero .flag:hover{
+  transform: scale(1.5), rotate(0.5deg);
+  box-shadow: var(--shadow-hover);
+}
+.hero .info h1{
+  font-size: clamp(2rem,4vw,3.5rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: var(--small-space);
+  background: linear-gradient(135deg,var(--black),var(--grey));
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.175);
+}
+.hero .info p {
+  color: var(--gray-text);
+  font-size: 1.1rem;
+  margin-bottom: var(--small-space);
+  opacity: 0.7;
+
+}
+
+.hero .info p :last-child{
+  color: var(--tan);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+/*Grid layout*/
+.container .grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+
+
+
+}
+
+.container .card{
+  background: white;
+}
