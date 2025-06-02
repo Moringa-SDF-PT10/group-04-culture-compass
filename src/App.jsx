@@ -10,7 +10,7 @@ import CountryDetails from './Components/CountriesDetails'
 import './index.css'
 import NavBar from './navbar-test.jsx'
 import Cuisine from "./Components/Cuisine";
-import AllCuisinesPage from './components/AllCuisinesPage';
+import AllCuisinesPage from './Components/AllCuisinesPage';
 
 function App() {
   //Users array for authentication
