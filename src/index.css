@@ -978,13 +978,12 @@ filter:brightness(0.5) contrast(1.05)
 }
 
 .tag{
-  background:linear-gradient(135deg, var(--tan), var(--browm)) ;
+  background:linear-gradient(135deg, var(--browm), var(--cream)) ;
   color: var(--black);
   font-weight: 600;
   font-family: "Sour Gummy", sans-serif;
   border-radius: 5px;
   font-size: 0.85rem;
-  opacity: 0.9;
 }
 
 /*CUISIN CARDS START HERE*/
@@ -1044,11 +1043,12 @@ filter:brightness(0.5) contrast(1.05)
   transition: transform 0.4s ease, filter 0.4s ease;
   position: relative;
   z-index: 2;
+  filter:brightness(0.6)
 }
 
 .meal:hover img{
   transform: scale(1.05);
-  filter: brightness(1.1) contrast(1.05);
+  filter: brightness(1.05) contrast(1.05);
 }
 
 .meal .content {
@@ -1094,4 +1094,50 @@ animation: pulse 1.5s ease-in-out infinite;
   50% {
     opacity: 1;
   }
+}
+
+/* Overview */
+.overview-details{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap:1rem;
+  margin-top: var(--medium-space);
+  font-family: "Sour Gummy", sans-serif;
+  color:rgb(150, 138, 120);
+}
+/* BUTTONS!!!! :) */
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Sour Gummy", sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95;
+
+}
+.btn-primary, .btn.book{
+  background: linear-gradient(135deg, var(--cream),var(--peach-glow));
+}
+.btn-primary:hover, .btn.book:hover{
+  transform: translateY(-2px);
+  box-shadow:var(--shadow-hover) ;
+  
+}
+
+.btn.view-more{
+  background: transparent;
+  color: var(--shadow-hover);
+  
+  background: linear-gradient(135deg, var(--cream),var(--peach-glow));
+}
+.btn.view-more:hover{
+   transform: translateY(-2px);
+  box-shadow:var(--shadow-hover) ;
+  
 }
