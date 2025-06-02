@@ -114,7 +114,7 @@ setCountry(countryWithImage);
                 <span key={i} className="tag">{lang}</span>
               )) : 'N/A'}
             </div>
-            <button className="btn book" onClick={toggleBookingForm}><img src="/assets/bookingflight.png"/> Book Trip</button>
+            <button className="btn book" onClick={toggleBookingForm}><img src="/public/assets/bookingflight.png"/> Book Trip</button>
           </div>
         </div>
 
