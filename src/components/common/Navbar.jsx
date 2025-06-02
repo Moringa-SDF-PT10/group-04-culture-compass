@@ -8,7 +8,7 @@ function NavBar() {
     <nav className="navbar">
       <div className="nav-container">
         <div className="navbar-content">
-             <Link to="/countries" className="nav-link"><img className="brand-logo" src ='/public/logo.jpg'></img></Link>
+             <Link to="/countries" className="nav-link"><img className="brand-logo" src ='/logo.jpg'></img></Link>
 
           <div className="navbar-links">
          
@@ -21,7 +21,7 @@ function NavBar() {
               className="user-profile-btn" 
               onClick={() => setShowDropdown(!showDropdown)}
             >
-              <img src="/public/assets/avatar.png" alt="User Avatar" className="user-avatar" />
+              <img src="/assets/avatar.png" alt="User Avatar" className="user-avatar" />
               <span className="user-name">Menu</span>
             </button>
 
