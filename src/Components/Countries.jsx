@@ -9,7 +9,7 @@ const Countries = () => {
 
   const getCulturalSiteImage = (countryCode) => {
   const seed = countryCode.charCodeAt(0) + countryCode.charCodeAt(1) + countryCode.charCodeAt(2);
-  return `https://picsum.photos/seed/${seed}/2000/500`; //for consitency charcode uses a lot of math bruh ydek. it basically takes the 1, 2, 3 letters and creates a unique code for the countries so the images are constant lol
+  return `https://picsum.photos/seed/${seed}/800/500`; //for consitency charcode uses a lot of math bruh ydek. it basically takes the 1, 2, 3 letters and creates a unique code for the countries so the images are constant lol
 };
 
 
@@ -114,7 +114,7 @@ setFilteredCountries(countriesWithImages);
               {/* Click to explore cuisine hint */}
               <div className="cuisine">
                 <div className="hint">
-                  <span className="icon"><img src='/src/assets/creamRamen.png'/></span>
+                  <span className="icon"><img src='/public/assets/creamRamen.png'/></span>
                   <span className="text">Explore {country.name.common}'s Heritege</span>
                 </div>
               </div>

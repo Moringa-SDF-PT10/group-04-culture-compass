@@ -63,72 +63,47 @@ export default function BookingTrip({ countryName, countryId, userId, onBooked }
   };
 
   return (
-    <div className="booking-form-container">
-      <h3>Book a Trip to {countryName}</h3>
-      {!bookingSuccess ? (
-        <form onSubmit={handleBookingSubmit}>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={bookingDetails.name}
-              onChange={handleBookingInputChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="date">Date:</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              value={bookingDetails.date}
-              onChange={handleBookingInputChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="travelers">Number of Travelers:</label>
-            <input
-              type="number"
-              id="travelers"
-              name="travelers"
-              value={bookingDetails.travelers}
-              onChange={handleBookingInputChange}
-              min="1"
-              required
-            />
-          </div>
-          <button type="submit">Confirm Booking</button>
-        </form>
-      ) : (
-        <div className="booking-success-message">
-          <h4>Booking Successful!</h4>
-          <table>
-            <tbody>
-              <tr>
-                <td>Name:</td>
-                <td>{bookingSuccess.name}</td>
-              </tr>
-              <tr>
-                <td>Date:</td>
-                <td>{bookingSuccess.date}</td>
-              </tr>
-              <tr>
-                <td>Travelers:</td>
-                <td>{bookingSuccess.travelers}</td>
-              </tr>
-              {/* Add other relevant details from the response if available */}
-            </tbody>
-          </table>
-          <button onClick={() => {
-            setBookingSuccess(null);
-            if (onBooked) { onBooked(); }
-          }}>Close</button>
+    <div className="country-card">
+      <h3 className="booking-title">Book a Trip to {countryName}</h3>
+      <form className="booking-form" onSubmit={handleBookingSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={bookingDetails.name}
+            onChange={handleBookingInputChange}
+            required
+          />
         </div>
-      )}
+        <div className="form-group">
+          <label htmlFor="date">Date:</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            value={bookingDetails.date}
+            onChange={handleBookingInputChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="travelers">Number of Travelers:</label>
+          <input
+            type="number"
+            id="travelers"
+            name="travelers"
+            value={bookingDetails.travelers}
+            onChange={handleBookingInputChange}
+            min="1"
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-primary booking-submit">
+          Confirm Booking
+        </button>
+      </form>
     </div>
   );
-} 
+}

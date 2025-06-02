@@ -52,8 +52,8 @@ const Cuisine = ({ countryName }) => {
   if (loading) return <div className="loading">Loading cuisine...</div>;
 
   return (
-    <div className="section">
-      <h2>🍽️ Traditional Cuisine</h2>
+    <div className="cuisine-section">
+      <h2><img src='/public/assets/cuisine.png'/> Traditional Cuisine</h2>
       
       {/* Meals Grid */}
       {meals.length > 0 ? (
