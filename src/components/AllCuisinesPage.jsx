@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
-const Cuisine = ({ countryName }) => {
-  const [meal, setMeal] = useState(null);
+const AllCuisinesPage = () => {
+  const { countryName } = useParams();
+  const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [hasMoreMeals, setHasMoreMeals] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetchMeal();
+    fetchAllMeals();
   }, [countryName]);
 
   const getCuisineMapping = (name) => {
@@ -20,7 +21,7 @@ const Cuisine = ({ countryName }) => {
     return mappings[name] || [name];
   };
 
-  const fetchMeal = async () => {
+  const fetchAllMeals = async () => {
     try {
       const terms = [...getCuisineMapping(countryName), countryName];
       let mealsData = [];
@@ -44,11 +45,7 @@ const Cuisine = ({ countryName }) => {
         }
       }
 
-      if (mealsData.length > 0) {
-        setMeal(mealsData[0]);
-        setHasMoreMeals(mealsData.length > 1);
-      }
-
+      setMeals(mealsData);
       setLoading(false);
     } catch (error) {
       console.error(error);
@@ -56,32 +53,35 @@ const Cuisine = ({ countryName }) => {
     }
   };
 
-  if (loading) return <div className="loading">Loading cuisine...</div>;
+  const handleBack = () => {
+    navigate(-1);
+  };
+
+  if (loading) return <div className="loading">Loading all cuisines...</div>;
 
   return (
-    <div className="cuisine-section" id="main-cuisine">
-      <h2 className="cuisine-title">🍽️ Traditional Cuisine from {countryName}</h2>
+    <div className="all-cuisines-section" id="all-cuisines-page">
+      <div className="page-header">
+        <h2 className="page-title">🍽️ All Cuisines from {countryName}</h2>
+        <button onClick={handleBack} className="back-btn" id="back-to-main-btn">
+          ← Back
+        </button>
+      </div>
 
-      {meal ? (
-        <div className="meal-card" id={`meal-${meal.idMeal}`}>
-          <img src={meal.strMealThumb} alt={meal.strMeal} className="meal-image" />
-          <div className="meal-content">
-            <h3 className="meal-name">{meal.strMeal}</h3>
-            <p className="meal-category">{meal.strCategory}</p>
-
-            {hasMoreMeals && (
-              <Link
-                to={`/cuisines/${countryName}`}
-                className="view-all-btn"
-                id="view-all-cuisines-btn"
-              >
-                🍽️ View All Cuisines
-              </Link>
-            )}
-          </div>
+      {meals.length > 0 ? (
+        <div className="meals-grid" id="all-meals-grid">
+          {meals.map((meal) => (
+            <div key={meal.idMeal} className="meal-item" id={`meal-item-${meal.idMeal}`}>
+              <img src={meal.strMealThumb} alt={meal.strMeal} className="meal-thumbnail" />
+              <div className="meal-info">
+                <h3 className="meal-title">{meal.strMeal}</h3>
+                <p className="meal-type">{meal.strCategory}</p>
+              </div>
+            </div>
+          ))}
         </div>
       ) : (
-        <div className="empty-state" id="no-cuisine">
+        <div className="empty-state" id="no-cuisines">
           <p className="empty-message">No Cuisine</p>
         </div>
       )}
@@ -89,4 +89,4 @@ const Cuisine = ({ countryName }) => {
   );
 };
 
-export default Cuisine;
+export default AllCuisinesPage;
