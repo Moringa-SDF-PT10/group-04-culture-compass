@@ -1155,6 +1155,10 @@ animation: pulse 1.5s ease-in-out infinite;
   box-shadow: var(--shadow-soft);
   transition: all 0.4s ease;
   margin-bottom: 0 auto;
+  animation: fadeInDown 0.8s ease-out;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .login-form:hover {
@@ -1197,3 +1201,52 @@ animation: pulse 1.5s ease-in-out infinite;
   transform: translateY(-2px);
   box-shadow:  0 8px 20px rgba(148, 137, 121, 0.4);
 }
+/* FOR THE SIGN UP FORM */
+.signup-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(148, 137, 121, 0.25);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s ease;
+}
+.signup-form:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  
+}
+.signup-form h2 {
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 2rem;
+  font-family: "Sour Gummy", sans-serif;
+}
+.signup-form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(148, 137, 121, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.signup-form button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--cream), var(--pink));
+  color: var(--black);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.signup-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 214, 186, 0.4);}
+
