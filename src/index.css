@@ -129,7 +129,7 @@ a{
   display:flex;
   align-items: center;
   text-decoration:none;
-  margin-right: auto;
+
 }
 .brand-logo{
   height:40px;
@@ -672,7 +672,7 @@ border-bottom: none;
 
 .grid{
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap:2.5rem;
   margin-bottom: 3rem;
   animation: fadeInUp 0.8s ease-out 0.4s both;
