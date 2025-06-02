@@ -12,6 +12,7 @@ const CountryDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showBookingForm, setShowBookingForm] = useState(false);
+  const [bookedTripDetails, setBookedTripDetails] = useState(null); // New state for successful booking details
   const userId = localStorage.getItem("userId"); // Assuming userId is stored in localStorage
 
   useEffect(() => {
@@ -66,6 +67,12 @@ setCountry(countryWithImage);
 
   const toggleBookingForm = () => {
     setShowBookingForm(!showBookingForm);
+    setBookedTripDetails(null); // Clear previous booking details when opening form
+  };
+
+  const handleBookingSuccess = (bookingDetails) => {
+    setBookedTripDetails(bookingDetails);
+    setShowBookingForm(false); // Hide the form
   };
 
   if (loading) return <div className="loading">Loading...</div>;
@@ -118,14 +125,30 @@ setCountry(countryWithImage);
           </div>
         </div>
 
+        {/* Display Booking Details if successful */}
+        {bookedTripDetails && (
+          <div className="country-card">
+            <h3>Your Booking Details</h3>
+            <table>
+              <tbody>
+                <tr><td>Name:</td><td>{bookedTripDetails.name}</td></tr>
+                <tr><td>Date:</td><td>{bookedTripDetails.date}</td></tr>
+                <tr><td>Travelers:</td><td>{bookedTripDetails.travelers}</td></tr>
+                {/* Add other details from bookedTripDetails as needed */}
+              </tbody>
+            </table>
+            <button onClick={() => setBookedTripDetails(null)}>Close Details</button>
+          </div>
+        )}
+
         {/* Booking Trip Component */}
-        {showBookingForm && (
+        {showBookingForm && !bookedTripDetails && (
           <div className>
             <BookingTrip
               countryName={country.name.common}
               countryId={id}
               userId={userId}
-              onBooked={() => setShowBookingForm(false)}
+              onBooked={handleBookingSuccess}
             />
           </div>
         )}

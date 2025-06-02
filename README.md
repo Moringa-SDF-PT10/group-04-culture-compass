@@ -43,9 +43,22 @@ Users can browse a list of countries fetched from the [REST Countries API](https
 Cultural cuisines from different countries are displayed with the ability to add or explore dishes from around the world. This section enhances cultural immersion through food.
 
 
-## 📅 Booking
+## 📅 Booking Trip Feature
 
-Users can book cultural experiences (e.g., food tours, cultural visits) related to each country.
+his feature allows users to book a trip to a specific country from the country details page.
+
+## Components Involved
+
+- `src/Components/CountriesDetails.jsx`: This component displays the details of a country. It contains the "Book Trip" button that toggles the visibility of the booking form.
+- `src/Components/BookingTrip.jsx`: This component contains the booking form, handles input, submits booking details to a backend API, and displays a success message.
+
+## Functionality
+
+1.  **Display Button:** A "📅 Book Trip" button is displayed on the country details page (in `CountriesDetails.jsx`).
+2.  **Toggle Form:** Clicking the "Book Trip" button toggles the visibility of the `BookingTrip` component (the booking form).
+3.  **Fill Form:** The user can fill out their name, desired date, and number of travelers in the booking form (`BookingTrip.jsx`).
+4.  **Submit Booking:** Upon submitting the form, the booking details are sent via a `POST` request to a configured backend API endpoint.
+5.  **Success Message:** After a successful API response, the `BookingTrip` component displays a user-friendly table format of the submitted booking details, replacing the form.
 
 
 ## ⭐ Reviews
