@@ -17,7 +17,10 @@ export default function Home(){
               <Link to="/login" className="btn-primary">
                 Start Exploring
               </Link>
-               <Link to="/signup">Sign Up</Link>
+              <br>
+              </br>
+                 <Link to="/signup" className='sign-up'>Sign Up</Link>
+            
             </div>
             
             <div className="features">
