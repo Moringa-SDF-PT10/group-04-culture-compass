@@ -7,6 +7,12 @@ const Countries = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCountries, setFilteredCountries] = useState([]);
 
+  const getCulturalSiteImage = (countryCode) => {
+  const seed = countryCode.charCodeAt(0) + countryCode.charCodeAt(1) + countryCode.charCodeAt(2);
+  return `https://picsum.photos/seed/${seed}/2000/500`; //for consitency charcode uses a lot of math bruh ydek. it basically takes the 1, 2, 3 letters and creates a unique code for the countries so the images are constant lol
+};
+
+
   useEffect(() => {
     fetchCountries();
   }, []);
@@ -26,11 +32,17 @@ const Countries = () => {
       
 
       const sortedCountries = data
-        .sort((a, b) => a.name.common.localeCompare(b.name.common))
-        .slice(0, 50);
-      
-      setCountries(sortedCountries);
-      setFilteredCountries(sortedCountries);
+  .sort((a, b) => a.name.common.localeCompare(b.name.common))
+  .slice(0, 250);
+
+const countriesWithImages = sortedCountries.map((country) => ({
+  ...country,
+  culturalImage: getCulturalSiteImage(country.cca3)
+      }));
+
+setCountries(countriesWithImages);
+setFilteredCountries(countriesWithImages);
+
       setLoading(false);
     } catch (error) {
       console.error('Error fetching countries:', error);
@@ -47,6 +59,7 @@ const Countries = () => {
   }
 
   return (
+  <div className='body'>
     <div className="container" id="countries">
       <h1 className="title">Explore Countries & Cultures</h1>
       
@@ -72,9 +85,9 @@ const Countries = () => {
           >
             <div className="image">
               <img
-                src={country.flags?.png || country.flags?.svg}
-                alt={`${country.name.common} flag`}
-                className="flag"
+        src={country.culturalImage}
+          alt={`${country.name.common} cultural site`}
+        className="flag"
               />
               <div className="overlay">
                 <div className="info">
@@ -86,7 +99,7 @@ const Countries = () => {
             
             <div className="content">
               <div className="details">
-                <span className="capital">Capital: {country.capital?.[0] || 'N/A'}</span>
+                <span className="capital">The Capital: {country.capital?.[0] || 'N/A'}</span>
                 <span className="population">{(country.population / 1000000).toFixed(1)}M people</span>
               </div>
               
@@ -101,8 +114,8 @@ const Countries = () => {
               {/* Click to explore cuisine hint */}
               <div className="cuisine">
                 <div className="hint">
-                  <span className="icon">🍽️</span>
-                  <span className="text">Click to explore {country.name.common}'s cuisine</span>
+                  <span className="icon"><img src='/src/assets/creamRamen.png'/></span>
+                  <span className="text">Explore {country.name.common}'s Heritege</span>
                 </div>
               </div>
             </div>
@@ -115,6 +128,7 @@ const Countries = () => {
           No countries found matching your search.
         </div>
       )}
+    </div>
     </div>
   );
 };
