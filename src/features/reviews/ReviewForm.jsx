@@ -48,7 +48,7 @@ const ReviewForm = ({ country, onAddReview }) => {
     <form onSubmit={handleSubmit} className="reviewForm">
       <h3 className="review-title">Add Review for {country}</h3>
             <label>
-        Name:
+        Your Name :
         <input
           type="text"
           value={name}
@@ -63,6 +63,7 @@ const ReviewForm = ({ country, onAddReview }) => {
           <Star
             key={num}
             onClick={() => setRating(num)}
+          
             className={`${rating >= num ? 'text-yellow-400' : 'text-gray-300'}`}
             fill={rating >= num ? 'currentColor' : 'none'}
              required
@@ -76,7 +77,7 @@ const ReviewForm = ({ country, onAddReview }) => {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           className="comment"
-          placeholder="Please review me..."
+          placeholder="How was your visit"
           required
           disabled={submitting}
         />

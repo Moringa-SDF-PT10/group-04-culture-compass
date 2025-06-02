@@ -47,7 +47,7 @@ export default function BookingTrip({ countryName, countryId, userId, onBooked }
   };
 
   return (
-    <div className="booking-form-container">
+    <div className="booking-card">
       <h3>Book a Trip to {countryName}</h3>
       <form onSubmit={handleBookingSubmit}>
         <div>

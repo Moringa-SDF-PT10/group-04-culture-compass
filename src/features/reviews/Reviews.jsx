@@ -78,14 +78,15 @@ const Reviews =() => {
            <label>
           Sort by:{' '}
           <select value={sortBy} onChange={e => setSortBy(e.target.value)}>
-            <option value="latest">Latest</option>
+         <option value="latest">Latest</option>
+         
             <option value="rating">Rating</option>
           </select>
         </label>
 </div>
       </div>
 
-      {filteredReviews.length === 0 ? (
+   {filteredReviews.length === 0 ? (
         <p>No reviews found.</p>
       ) : (
      filteredReviews.map(review => (

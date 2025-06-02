@@ -8,7 +8,7 @@ import Countries from './Components/Countries'
 import CountryDetails from './Components/CountriesDetails'
 // import NavBar from './components/common/Navbar'
 import './index.css'
-import NavBar from './navbar-test.jsx'
+import NavBar from './components/common/Navbar'
 
 function App() {
   //Users array for authentication

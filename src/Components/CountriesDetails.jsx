@@ -120,7 +120,7 @@ setCountry(countryWithImage);
 
         {/* Booking Trip Component */}
         {showBookingForm && (
-          <div className="card">
+          <div className="booking-card">
             <BookingTrip
               countryName={country.name.common}
               countryId={id}
@@ -151,7 +151,6 @@ setCountry(countryWithImage);
 
         {/* Review Form */}
         <div className="country-card">
-          <h4>Leave a Review</h4>
           <ReviewForm country={country.name.common} onAddReview={handleAddReview} />
         </div>
 
