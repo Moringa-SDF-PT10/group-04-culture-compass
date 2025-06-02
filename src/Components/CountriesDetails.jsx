@@ -52,7 +52,7 @@ setCountry(countryWithImage);
 
   const fetchReviews = async (countryName) => {
     try {
-      const res = await fetch(`http://localhost:3000/reviews?country=${countryName}`);
+      const res = await fetch(`https://group-04-culture-compass.onrender.com/reviews?country=${countryName}`);
       const data = await res.json();
       setReviews(data.slice(0, 3));
       } catch (err) {
