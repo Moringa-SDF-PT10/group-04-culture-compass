@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Cuisine from './Cuisine';
 import ReviewForm from '../features/reviews/ReviewForm';
 import ReviewCard from '../features/reviews/ReviewCard';
+import BookingTrip from './BookingTrip';
 
 const CountryDetails = () => {
   const { id } = useParams();
@@ -10,6 +11,8 @@ const CountryDetails = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showBookingForm, setShowBookingForm] = useState(false);
+  const userId = localStorage.getItem("userId"); // Assuming userId is stored in localStorage
 
   useEffect(() => {
     fetchCountryData();
@@ -51,14 +54,18 @@ setCountry(countryWithImage);
     try {
       const res = await fetch(`http://localhost:3000/reviews?country=${countryName}`);
       const data = await res.json();
-      setReviews(data.slice(0, 3)); 
+      setReviews(data.slice(0, 3));
       } catch (err) {
     console.error('Error loading reviews:', err);
   }
 };
 
   const handleAddReview = (newReview) => {
-    setReviews((prev) => [newReview, ...prev.slice(0, 2)]); 
+    setReviews((prev) => [newReview, ...prev.slice(0, 2)]);
+  };
+
+  const toggleBookingForm = () => {
+    setShowBookingForm(!showBookingForm);
   };
 
   if (loading) return <div className="loading">Loading...</div>;
@@ -94,7 +101,7 @@ setCountry(countryWithImage);
               <div><strong>Capital:</strong> {country.capital?.[0] || 'N/A'}</div>
               <div><strong>Population:</strong> {country.population?.toLocaleString()}</div>
               <div><strong>Area:</strong> {country.area?.toLocaleString()} km²</div>
-              <div><strong>Currency:</strong> {country.currencies ? 
+              <div><strong>Currency:</strong> {country.currencies ?
                 Object.values(country.currencies)[0]?.name : 'N/A'}</div>
             </div>
           </div>
@@ -107,11 +114,21 @@ setCountry(countryWithImage);
                 <span key={i} className="tag">{lang}</span>
               )) : 'N/A'}
             </div>
-
-              <Link to="/booking" className="booking-btn">Book A trip</Link>
-            
+            <button className="btn book" onClick={toggleBookingForm}>📅 Book Trip</button>
           </div>
         </div>
+
+        {/* Booking Trip Component */}
+        {showBookingForm && (
+          <div className="card">
+            <BookingTrip
+              countryName={country.name.common}
+              countryId={id}
+              userId={userId}
+              onBooked={() => setShowBookingForm(false)}
+            />
+          </div>
+        )}
 
         {/* Cuisine Component */}
         <Cuisine countryName={country.name.common} />
@@ -121,7 +138,7 @@ setCountry(countryWithImage);
           <h2>Top Reviews</h2>
           {reviews.length > 0 ? (
            [...reviews]
-      .sort((a, b) => new Date(b.date) - new Date(a.date)) 
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
       .map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))

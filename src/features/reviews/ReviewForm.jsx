@@ -23,7 +23,7 @@ const ReviewForm = ({ country, onAddReview }) => {
       timestamp: new Date().toISOString()
     };
 
-    fetch('http://localhost:3000/reviews', {
+    fetch('https://group-04-culture-compass.onrender.com/reviews', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newReview)
