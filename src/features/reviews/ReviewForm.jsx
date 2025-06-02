@@ -83,7 +83,7 @@ const ReviewForm = ({ country, onAddReview }) => {
         />
       </div>
 
-      <button type="submit" className="submit" disabled={submitting}>Review</button>
+      <button type="submit" className="submit" disabled={submitting}>Post</button>
     </form>
   );
 };
