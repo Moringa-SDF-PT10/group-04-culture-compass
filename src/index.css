@@ -412,7 +412,7 @@ border-bottom: none;
       transform:translateY(0px)
     }
     50%{
-      transform: translateY(-2px);
+      transform: translateY(-5px);
     }
 
   }
@@ -434,9 +434,14 @@ border-bottom: none;
   font-weight: 600;
   font-size: 1.0rem;
   transition: all 0.4s ease;
-  box-shadow: 0 8px 15px var(--gray-text);
+  box-shadow: 0 8px 100px var(--gray-text);
   position: relative;
   overflow: hidden;
+}
+.sign-up{
+
+  color:#393E46;
+
 }
 
   .btn-primary::before{
