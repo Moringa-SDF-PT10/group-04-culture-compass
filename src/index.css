@@ -1052,7 +1052,66 @@ filter:brightness(0.5) contrast(1.05)
 
 
 
-/*CUISIN CARDS START HERE*/
+/*CUISIN & pages START HERE*/
+.all-cuisine-section{
+  padding-top: 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 100vh;
+  position: relative;
+
+}
+.all-cuisines-section::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:radial-gradient(circle at 30% 40%, var(--peach-glow) 0%, transparent 50%), radial-gradient(circle at 70% 60%, var(--blush-mist) 0%, transparent 50%), radial-gradient(circle at 50% 80%, var(--cream-whisper) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+.page-header {
+ display: flex;
+justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid rgba(148, 137, 121, 0.25);
+  animation: fadeInDown 0.8s ease-out;}
+
+  .page-title{
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--black);
+  font-family: "Sour Gummy", sans-serif;
+  background: linear-gradient(135deg, var(--black), var(--grey));
+  background-clip: text;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.26);}
+  
+  .back-btn {
+  background: linear-gradient(135deg, var(--tan), var(--browm));
+  color: var(--black);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-family: "Sour Gummy", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(148, 137, 121, 0.3);}
+
 
 
 /*for loading screen*/
