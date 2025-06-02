@@ -59,26 +59,21 @@ const Cuisine = ({ countryName }) => {
   if (loading) return <div className="loading">Loading cuisine...</div>;
 
   return (
-    <div className="cuisine-section" id="main-cuisine">
-      <h2 className="cuisine-title">🍽️ Traditional Cuisine from {countryName}</h2>
-
-      {meal ? (
-        <div className="meal-card" id={`meal-${meal.idMeal}`}>
-          <img src={meal.strMealThumb} alt={meal.strMeal} className="meal-image" />
-          <div className="meal-content">
-            <h3 className="meal-name">{meal.strMeal}</h3>
-            <p className="meal-category">{meal.strCategory}</p>
-
-            {hasMoreMeals && (
-              <Link
-                to={`/cuisines/${countryName}`}
-                className="view-all-btn"
-                id="view-all-cuisines-btn"
-              >
-                🍽️ View All Cuisines
-              </Link>
-            )}
-          </div>
+    <div className="cuisine-section">
+      <h2><img src='/public/assets/cuisine.png'/> Traditional Cuisine</h2>
+      
+      {/* Meals Grid */}
+      {meals.length > 0 ? (
+        <div className="meals">
+          {meals.map((meal) => (
+            <div key={meal.idMeal} className="meal">
+              <img src={meal.strMealThumb} alt={meal.strMeal} />
+              <div className="content">
+                <h3>{meal.strMeal}</h3>
+                <p>{meal.strCategory}</p>
+              </div>
+            </div>
+          ))}
         </div>
       ) : (
         <div className="empty-state" id="no-cuisine">
