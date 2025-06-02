@@ -47,10 +47,10 @@ export default function BookingTrip({ countryName, countryId, userId, onBooked }
   };
 
   return (
-    <div className="booking-form-container">
-      <h3>Book a Trip to {countryName}</h3>
-      <form onSubmit={handleBookingSubmit}>
-        <div>
+    <div className="country-card">
+      <h3 className="booking-title">Book a Trip to {countryName}</h3>
+      <form className="booking-form" onSubmit={handleBookingSubmit}>
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -61,7 +61,7 @@ export default function BookingTrip({ countryName, countryId, userId, onBooked }
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="date">Date:</label>
           <input
             type="date"
@@ -72,7 +72,7 @@ export default function BookingTrip({ countryName, countryId, userId, onBooked }
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="travelers">Number of Travelers:</label>
           <input
             type="number"
@@ -84,8 +84,10 @@ export default function BookingTrip({ countryName, countryId, userId, onBooked }
             required
           />
         </div>
-        <button type="submit">Confirm Booking</button>
+        <button type="submit" className="btn btn-primary booking-submit">
+          Confirm Booking
+        </button>
       </form>
     </div>
   );
-} 
+}

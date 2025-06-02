@@ -114,13 +114,13 @@ setCountry(countryWithImage);
                 <span key={i} className="tag">{lang}</span>
               )) : 'N/A'}
             </div>
-            <button className="btn book" onClick={toggleBookingForm}>📅 Book Trip</button>
+            <button className="btn book" onClick={toggleBookingForm}><img src="/src/assets/bookingflight.png"/> Book Trip</button>
           </div>
         </div>
 
         {/* Booking Trip Component */}
         {showBookingForm && (
-          <div className="card">
+          <div className>
             <BookingTrip
               countryName={country.name.common}
               countryId={id}
@@ -151,7 +151,6 @@ setCountry(countryWithImage);
 
         {/* Review Form */}
         <div className="country-card">
-          <h4>Leave a Review</h4>
           <ReviewForm country={country.name.common} onAddReview={handleAddReview} />
         </div>
 

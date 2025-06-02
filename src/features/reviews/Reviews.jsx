@@ -51,7 +51,7 @@ const Reviews =() => {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <div>
+    <div className='reviews-page'>
       <h2>All Reviews</h2>
       <div className='country-filter'>
         <label>
@@ -78,14 +78,15 @@ const Reviews =() => {
            <label>
           Sort by:{' '}
           <select value={sortBy} onChange={e => setSortBy(e.target.value)}>
-            <option value="latest">Latest</option>
+         <option value="latest">Latest</option>
+         
             <option value="rating">Rating</option>
           </select>
         </label>
 </div>
       </div>
 
-      {filteredReviews.length === 0 ? (
+   {filteredReviews.length === 0 ? (
         <p>No reviews found.</p>
       ) : (
      filteredReviews.reverse().map(review => (
