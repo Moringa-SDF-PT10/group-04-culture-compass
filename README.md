@@ -28,9 +28,15 @@ Welcome to **Culture Compass**, a vibrant web app that allows users to explore c
 
 
 ## 🔐 Authentication
-
-- Sign up & login functionalities using email and password.
+- The App handles basic user authentication with `LoginForm` and `SignUpForm` components
 - Users must be authenticated to view the countries,leave a review or booking.
+- If authentication fails, an error message is displayed
+- Relies on React state hook for user management.
+- Future improvements could include backend authentication, secure password storage, and session handling
+
+### Test User Credentials:
+- Email: Jazz@example.com
+- Password: 12345
 
 
 ## 🌐 Countries
