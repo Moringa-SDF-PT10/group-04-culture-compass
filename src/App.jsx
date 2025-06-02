@@ -47,7 +47,7 @@ function App() {
           <Route path="/login" element={<LoginForm users={users} setUsers={setUsers} />} />
           <Route path="/signup" element={<SignUpForm users={users} setUsers={setUsers} />} />
           <Route path='/Reviews' element={<Reviews/>} />
-          <Route path="/" element={<Cuisine countryName="Italy" />} />
+          <Route path="/" element={<Cuisine countryName="CountryName" />} />
         <Route path="/cuisines/:countryName" element={<AllCuisinesPage />} />
         </Routes>
       </div>
