@@ -2,7 +2,7 @@
   "name": "json-server-backend",
   "version": "1.0.0",
   "scripts": {
-  "start": "json-server --host 0.0.0.0 --watch reviews.json --port $PORT"
+  "start": "json-server --host 0.0.0.0 --watch db.json --port $PORT"
 },
   "dependencies": {
     "json-server": "^0.17.4"
