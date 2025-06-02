@@ -114,7 +114,7 @@ setFilteredCountries(countriesWithImages);
               {/* Click to explore cuisine hint */}
               <div className="cuisine">
                 <div className="hint">
-                  <span className="icon"><img src='/src/assets/creamRamen.png'/></span>
+                  <span className="icon"><img src='/public/assets/creamRamen.png'/></span>
                   <span className="text">Explore {country.name.common}'s Heritege</span>
                 </div>
               </div>
