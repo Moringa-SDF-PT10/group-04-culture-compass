@@ -139,7 +139,7 @@ setCountry(countryWithImage);
           {reviews.length > 0 ? (
            [...reviews]
       .sort((a, b) => new Date(b.date) - new Date(a.date))
-      .map((review) => (
+      .reverse().map((review) => (
               <ReviewCard key={review.id} review={review} />
             ))
           ) : (

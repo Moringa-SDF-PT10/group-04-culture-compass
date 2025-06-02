@@ -88,7 +88,7 @@ const Reviews =() => {
       {filteredReviews.length === 0 ? (
         <p>No reviews found.</p>
       ) : (
-     filteredReviews.map(review => (
+     filteredReviews.reverse().map(review => (
   <div key={`${review.country}-${review.id}`}>
     <h4>{review.country}</h4>
     <ReviewCard review={review} />
