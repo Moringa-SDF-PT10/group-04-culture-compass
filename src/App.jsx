@@ -15,14 +15,14 @@ function App() {
       name: 'Hugh Jazz',
       email: 'Jazz@example.com',
       password: '12345',
-      isLoggedin: 'false',
+      isLoggedin: false,
     },
     {
       id: 2,
       name: 'Michael Joseph',
       email: 'aoinihonjin@gmail.com',
       password: '12345',
-      isLoggedin: 'false',
+      isLoggedin: false,
     }
   ]);
 
