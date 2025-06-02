@@ -20,7 +20,7 @@ export default function BookingTrip({ countryName, countryId, userId, onBooked }
     // Here you would typically send the bookingDetails to your backend API
     console.log('Booking Details:', bookingDetails);
     // Example of a placeholder API call (replace with your actual booking API)
-    fetch('https://your-booking-api-endpoint.io/bookings', {
+    fetch('https://683d7312199a0039e9e57fd5.mockapi.io/bookings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
