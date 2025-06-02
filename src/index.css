@@ -1291,6 +1291,14 @@ font-family: "Sour Gummy", sans-serif;}
   border-radius: 20px;
   margin: 2rem 0;
 }
+.empty-message{
+  font-size: 1.2rem;
+  color: var(--grey);
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.7;
+}
 
 
 
