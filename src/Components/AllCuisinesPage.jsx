@@ -62,7 +62,7 @@ if (loading) return <div className="loading">Loading all cuisines...</div>;
 return (
 <div className="all-cuisines-section" id="all-cuisines-page">
 <div className="page-header">
-<h2 className="page-title">🍽️ All Cuisines from {countryName}</h2>
+<h2 className="page-title"><img src='/assets/creamRamen.png'/> All Cuisines from {countryName}</h2>
 <button onClick={handleBack} className="back-btn" id="back-to-main-btn">
 ← Back
 </button>

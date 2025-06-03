@@ -132,7 +132,7 @@ a{
 
 }
 .brand-logo{
-  height:40px;
+  height:90px;
   width:auto;
   transition:transform 0.3s ease;
   border-radius: 10px;
@@ -461,7 +461,7 @@ border-bottom: none;
   .btn-primary:hover{
     transform:translateY(-3px);
     box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
-    filter:brightness(1.1); /*dirt gold shining effect lol*/
+    filter:brightness(1.1);
   }
   .features {
   display: grid;
@@ -924,6 +924,7 @@ filter:brightness(0.5) contrast(1.05)
   margin-bottom: 2rem;
   margin-top: 2rem;
 
+
 }
 .country-card::before{
   content: '';
@@ -1052,95 +1053,255 @@ filter:brightness(0.5) contrast(1.05)
 
 
 
-/*CUISIN CARDS START HERE*/
-.cuisine-section h2{
+/*CUISIN & pages START HERE*/
+.all-cuisine-section{
+  padding-top: 120px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 100vh;
+  position: relative;
+
+}
+.all-cuisines-section::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:radial-gradient(circle at 30% 40%, var(--peach-glow) 0%, transparent 50%), radial-gradient(circle at 70% 60%, var(--blush-mist) 0%, transparent 50%), radial-gradient(circle at 50% 80%, var(--cream-whisper) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+.page-header {
+ display: flex;
+justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid rgba(148, 137, 121, 0.25);
+  animation: fadeInDown 0.8s ease-out;}
+
+  .page-title{
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
   color: var(--black);
-font-size: 1.2rem;
-font-weight: 600;
-font-family: "Sour Gummy", sans-serif;
-margin-bottom: 0.5rem;
-line-height: 1.3;
-transition: color 0.3s ease;
+  font-family: "Sour Gummy", sans-serif;
+  background: linear-gradient(135deg, var(--black), var(--grey));
+  background-clip: text;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.26);}
 
-}
-.cuisine-card{
-  grid-column: 1/-1;
-}
+  .back-btn {
+  background: linear-gradient(135deg, var(--tan), var(--browm));
+  color: var(--black);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-family: "Sour Gummy", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(148, 137, 121, 0.3);}
 
-.meals{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)) 
-  ;
-  gap: 1.5rem;
-}
+  .back-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
+    filter:brightness(1.1);
 
-.meal{
-  background: whitesmoke;
-  border: 1px solid rgba(148, 137, 121, 0.25);
-  border-radius: 12px;
+  }
+
+
+  /* GRIDS */
+  .meals-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+  }
+  .meal-item{
+  background: white;
+  border: 2px solid rgba(148, 137, 121, 0.25);
+  border-radius: 20px;
   overflow: hidden;
   transition: all 0.4s ease;
+  cursor: pointer;
   position: relative;
-  box-shadow: 0 4px 15px rgba(148, 137, 121, 0.15);
-}
-.meal::before{
-  content:'';
-  position:absolute;
-  top:0;
+  box-shadow: var(--shadow-soft);
+
+  }
+  .meal-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: linear-gradient(
-    135deg,
-    rgba(255, 214, 186, 0.05) 0%, 
-    rgba(255, 220, 220, 0.05) 50%, 
-    rgba(255, 242, 235, 0.05) 100%
+    45deg, 
+    rgba(255,214,186,0.1) 0%, 
+    rgba(255,220,220,0.1) 25%,
+    rgba(255,242,235,0.1) 50%, 
+    rgba(223,208,184,0.1) 100%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none;
   z-index: 1;
-
+  pointer-events: none;
+}
+.meal-item:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(148, 137, 121, 0.3);
+}
+.meal-thumbnail{
+width:100%;
+height: 200px;
+object-fit:cover;
+transition: transform 0.4s ease;
+filter: brightness(0.5) contrast(1.3);
 }
 
 
-.meal:hover::before{
-  opacity: 1;
+.meal-item:hover .meal-thumbnail {
+  transform: scale(1.1);
+  filter: brightness(0.7) contrast(1.3);
 }
+.meal-info{
+padding:1.5rem;
+position: relative;
+z-index: 2;}
 
-.meal:hover{
-  transform: translateY(-8px rotate 0.5deg);
-  border: var(--tan);
-}
-.meal img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  position: relative;
-  z-index: 2;
-  filter:brightness(0.6)
-}
 
-.meal:hover img{
-  transform: scale(1.05);
-  filter: brightness(1.05) contrast(1.05);
-}
-
-.meal .content {
-  padding: 1.5rem;
-  position: relative;
-  z-index: 2;
-}
-.meal h3 {
-color: var(--black);
-font-size: 1.2rem;
+.meal-title{
+font-size:1.25rem;
 font-weight: 600;
-font-family: "Sour Gummy", sans-serif;
+color: var(--tan);
+filter: brightness(0.8);
 margin-bottom: 0.5rem;
-line-height: 1.3;
-transition: color 0.3s ease;
+font-family: "Sour Gummy", sans-serif;}
+
+
+
+/* CUISINE SECT */
+
+.cuisine-section{
+  margin: 3rem 0;
 }
+.cuisine-title{
+  font-size: clamp(1.5rem, 2.5vw,2rem);
+  font-weight: 600;
+  color: var(--black);
+  font-family: "Sour Gummy", sans-serif;
+}
+.meal-image{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.meal-image {
+  transform: scale(1.01);}
+  .country-card:hover {
+    transform: translateY(1px);
+  }
+.meal-card {
+  background: white;
+  border: 2px solid rgba(148, 137, 121, 0.25);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s ease;
+  position: relative;
+  padding-bottom: 3rem;
+}
+.meal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--cream);
+}
+.meal-card:hover .meal-image {
+  transform: scale(1.05);
+}
+.meal-name{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+
+}
+.meal-content{
+  padding: 2rem;
+}
+.meal-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--browm);
+  filter: brightness(0.5);
+  margin-bottom: 0.5rem;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.meal-category{
+  color: var(--grey);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  
+}
+
+.view-all-btn{
+  background: linear-gradient(135deg, var(--cream), var(--peach));
+  color: var(--black);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-family: "Sour Gummy", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(148, 137, 121, 0.3);
+  
+  
+}
+.view-all-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(148, 137, 121, 0.4);
+  filter: brightness(0.9);
+}
+.empty-state{
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border: 2px dashed rgba(148, 137, 121, 0.3);
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+.empty-message{
+  font-size: 1.2rem;
+  color: var(--grey);
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.7;
+}
+
+
+
 
 /*for loading screen*/
 .loading {
@@ -1153,6 +1314,12 @@ font-family: "Sour Gummy", sans-serif;
 animation: pulse 1.5s ease-in-out infinite;
 }
 /* Animation declarations */
+@keyframes successGlow {
+  0%{transform: scaleX(0);opacity: 0;}50% 
+    {opacity: 1;}100%
+    {transform: scaleX(1);
+    opacity: 0.8;}
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1469,20 +1636,93 @@ animation: pulse 1.5s ease-in-out infinite;
 
 }
 .reviewForm .submit {
-  width: 100%;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--tan), var(--browm));
-  color: var(--black);
-  border: none;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: "Sour Gummy", sans-serif;
+  width:100%;
+  padding:rem 2rem;
+  background:linear-gradient(135deg, var(--tan), var(--browm));
+  color:var(--black);
+  border:none;
+  border-radius:10px;
+  font-size:1.1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  font-family:"Sour Gummy", sans-serif;
 }
 .reviewForm .submit:hover{
-      transform:translateY(-3px);
-    box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
 
+}
+
+/* Chris' section*/
+.booking-success-message{
+  text-align:center;
+  padding:2.5rem 2rem;
+  background:white;
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  position: relative;
+  overflow: hidden;
+  animation:fadeInUp 0.8s ease-out;
+  margin-top:1rem;
+}
+.booking-success-message::before{
+  content: '';
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:4px;
+  background:linear-gradient(90deg, var(--cream), var(--pink), var(--beige));
+  transform:scaleX(1);
+  animation:successGlow 2s ease-in-out;
+}
+.booking-success-message h4{
+  color:var(--black);
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.175);
+  
+}
+.booking-success-message table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, var(--peach-glow), var(--cream-whisper));
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--cream);
+
+}
+.booking-success-message table tbody tr {
+  transition: all 0.3s ease;
+}
+.booking-success-message table tbody tr:hover {
+  background: rgba(255, 214, 186, 0.2);
+}
+.booking-success-message table td {
+  padding:1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(148, 137, 121, 0.2);
+  font-family: "Sour Gummy", sans-serif;
+}
+.booking-success-message button {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--peach), var(--browm)) ;
+  color: var(--black);
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Sour Gummy", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--peach-glow);
+  position: relative;
+  overflow: hidden;
+}
+.booking-success-message button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px var(--cream);
 }
