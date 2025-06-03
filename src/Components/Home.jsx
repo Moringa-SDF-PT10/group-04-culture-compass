@@ -8,7 +8,7 @@ export default function Home(){
           <div className="home">
             <div className="hero">
               <h1 className="title">
-                Discover Cultures Around the World
+                <img className="brand-logo" src ='/assets/favicon2.png'/>Discover Cultures Around the World
               </h1>
               <p className="subtitle">
                 Explore different countries, learn about their cultures, traditional cuisines, 

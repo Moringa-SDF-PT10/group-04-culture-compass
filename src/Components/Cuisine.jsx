@@ -90,7 +90,7 @@ if (loading) return <div className="loading">Loading cuisine...</div>;
 
 return (
 <div className="cuisine-section" id="main-cuisine">
-<h2 className="cuisine-title"><img src='/assets/cuisine.png'/>World Class Cuisine from {countryName}</h2>
+<h2 className="cuisine-title"><img className="brand-logo" src ='/assets/favicon2.png'/>World Class Cuisine from {countryName}</h2>
 
 {meal ? (
 <div className="meal-card" id={`meal-${meal.idMeal}`}>

@@ -132,8 +132,8 @@ a{
 
 }
 .brand-logo{
-  height:40px;
-  width:150px;
+  height:90px;
+  width:auto;
   transition:transform 0.3s ease;
   border-radius: 10px;
   object-fit:cover;

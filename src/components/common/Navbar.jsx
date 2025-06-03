@@ -8,7 +8,7 @@ function NavBar() {
     <nav className="navbar">
       <div className="nav-container">
         <div className="navbar-content">
-             <Link to="/countries" className="nav-link"><img className="brand-logo" src ='/assets/logo.jpg'></img></Link>
+             <Link to="/countries" className="nav-link"><img className="brand-logo" src ='/assets/favicon2.png'></img></Link>
 
           <div className="navbar-links">
          

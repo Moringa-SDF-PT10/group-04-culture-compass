@@ -61,7 +61,7 @@ setFilteredCountries(countriesWithImages);
   return (
   <div className='body'>
     <div className="container" id="countries">
-      <h1 className="title">Explore Countries & Cultures</h1>
+      <h1 className="title"><img className="brand-logo" src ='/assets/favicon2.png'/>Explore Countries & Cultures</h1>
       
       {/* Search Bar */}
       <div className="search">
