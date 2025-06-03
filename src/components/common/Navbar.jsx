@@ -8,7 +8,7 @@ function NavBar() {
     <nav className="navbar">
       <div className="nav-container">
         <div className="navbar-content">
-             <Link to="/countries" className="nav-link"><img className="brand-logo" src ='/public/logo.jpg'></img></Link>
+             <Link to="/countries" className="nav-link"><img className="brand-logo" src ='/assets/logo.jpg'></img></Link>
 
           <div className="navbar-links">
          
@@ -27,7 +27,7 @@ function NavBar() {
 
             {showDropdown && (
               <div className="user-dropdown">
-                <Link to="/booking" className="dropdown-item">My Bookings</Link>
+                
                 <Link to="/reviews" className="dropdown-item">Reviews</Link>
                 <hr className="dropdown-divider" />
               </div>

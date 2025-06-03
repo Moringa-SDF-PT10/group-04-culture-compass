@@ -133,7 +133,7 @@ a{
 }
 .brand-logo{
   height:40px;
-  width:auto;
+  width:150px;
   transition:transform 0.3s ease;
   border-radius: 10px;
   object-fit:cover;
@@ -1302,6 +1302,7 @@ font-family: "Sour Gummy", sans-serif;}
 
 
 
+
 /*for loading screen*/
 .loading {
 text-align: center;
@@ -1313,6 +1314,12 @@ font-family: "Sour Gummy", sans-serif;
 animation: pulse 1.5s ease-in-out infinite;
 }
 /* Animation declarations */
+@keyframes successGlow {
+  0%{transform: scaleX(0);opacity: 0;}50% 
+    {opacity: 1;}100%
+    {transform: scaleX(1);
+    opacity: 0.8;}
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1629,20 +1636,93 @@ animation: pulse 1.5s ease-in-out infinite;
 
 }
 .reviewForm .submit {
-  width: 100%;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--tan), var(--browm));
-  color: var(--black);
-  border: none;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: "Sour Gummy", sans-serif;
+  width:100%;
+  padding:rem 2rem;
+  background:linear-gradient(135deg, var(--tan), var(--browm));
+  color:var(--black);
+  border:none;
+  border-radius:10px;
+  font-size:1.1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  font-family:"Sour Gummy", sans-serif;
 }
 .reviewForm .submit:hover{
-      transform:translateY(-3px);
-    box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(148, 137, 121, 0.4);
 
+}
+
+/* Chris' section*/
+.booking-success-message{
+  text-align:center;
+  padding:2.5rem 2rem;
+  background:white;
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  position: relative;
+  overflow: hidden;
+  animation:fadeInUp 0.8s ease-out;
+  margin-top:1rem;
+}
+.booking-success-message::before{
+  content: '';
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:4px;
+  background:linear-gradient(90deg, var(--cream), var(--pink), var(--beige));
+  transform:scaleX(1);
+  animation:successGlow 2s ease-in-out;
+}
+.booking-success-message h4{
+  color:var(--black);
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.175);
+  
+}
+.booking-success-message table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, var(--peach-glow), var(--cream-whisper));
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--cream);
+
+}
+.booking-success-message table tbody tr {
+  transition: all 0.3s ease;
+}
+.booking-success-message table tbody tr:hover {
+  background: rgba(255, 214, 186, 0.2);
+}
+.booking-success-message table td {
+  padding:1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(148, 137, 121, 0.2);
+  font-family: "Sour Gummy", sans-serif;
+}
+.booking-success-message button {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--peach), var(--browm)) ;
+  color: var(--black);
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Sour Gummy", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--peach-glow);
+  position: relative;
+  overflow: hidden;
+}
+.booking-success-message button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px var(--cream);
 }
