@@ -21,7 +21,7 @@ function NavBar() {
               className="user-profile-btn" 
               onClick={() => setShowDropdown(!showDropdown)}
             >
-              <img src="/public/assets/avatar.png" alt="User Avatar" className="user-avatar" />
+              <img src="/assets/avatar.png" alt="User Avatar" className="user-avatar" />
               <span className="user-name">Menu</span>
             </button>
 
